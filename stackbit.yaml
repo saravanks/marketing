@@ -281,6 +281,23 @@ models:
         name: menus
         label: Blog Menus
         description: Which menus should this page show up in
+  careers:
+    type: page
+    label: Careers
+    template: careers
+    file: careers/index.md
+    hideContent: true
+    singleInstance: true
+    fields:
+      - type: string
+        name: title
+        label: Title
+        description: The title of the page.
+        required: true
+      - type: page_menus
+        name: menus
+        label: Careers Menus
+        description: Which menus should this page show up in
   contact:
     type: page
     label: Contact

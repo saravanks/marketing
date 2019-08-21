@@ -35,9 +35,9 @@ sections:
     actions:
       - label: Get Started
         url: '#'
-menus:
-  main:
-    weight: 2
-    title: Features
+# menus:
+#   main:
+#     weight: 2
+#     title: Features
 template: features
 ---
