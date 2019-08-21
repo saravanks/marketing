@@ -65,7 +65,7 @@ sections:
     component: CtaBlock
     type: ctablock
     title: Your Next Project is Mintues Away!
-    # subtitle: This is an optional description for the call to action block.
+    subtitle: Join the BETA to stay update on the latest Altostra news.
     actions:
       - label: JOIN BETA
         url: /join
