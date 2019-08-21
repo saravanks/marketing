@@ -7,8 +7,8 @@
         "menu": {
             "actions": [
                 {
-                    "label": "Sign Up",
-                    "url": "/signup"
+                    "label": "JOIN BETA",
+                    "url": "/join"
                 }
             ]
         }
