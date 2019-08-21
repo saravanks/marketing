@@ -1,8 +1,8 @@
 {
     "palette": "blue",
     "header": {
-        "title": "Azimuth",
-        "logo_img": "images/logo.png",
+        "title": "Altostra",
+        "logo_img": "images/altostra-logo.png",
         "has_nav": true,
         "menu": {
             "actions": [
@@ -14,16 +14,16 @@
         }
     },
     "footer": {
-        "logo_img": "images/logo_alt.png",
-        "tagline": "SaaS theme by Stackbit",
+        "logo_img": "images/altostra-logo.png",
+        "tagline": "",
         "has_nav": true,
         "nav_title": "Company",
         "has_social": true,
         "social_title": "Community",
-        "has_subscribe": true,
+        "has_subscribe": false,
         "subscribe_title": "Subscribe",
         "subscribe_content": "Stay up to date with our latest developments.",
-        "content": "&copy; Stackbit. All rights reserved.",
+        "content": "&copy; 2019 Altostra. All rights reserved.",
         "links": [
             {
                 "text": "Made with Stackbit",
@@ -32,5 +32,5 @@
             }
         ]
     },
-    "title": "Stackbit Azimuth Theme"
+    "title": "Altostra"
 }

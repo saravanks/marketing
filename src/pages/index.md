@@ -1,53 +1,40 @@
 ---
-title: Home
+title: ''
 sections:
   - section_id: hero
     component: HeroBlock
     type: heroblock
-    image: images/hero.png
-    title: This Is A Big Hero Headline
+    image: images/demo.gif
+    title: Build Modern Applications in Minutes
     content: >-
-      Azimuth is the perfect theme for developers, designers and entrepreneurs
-      who need a sleek, modern SaaS site. 
+      Combined with all your favorite tools
     actions:
-      - label: Learn More
-        url: /features
+      - label: JOIN BETA
+        url: /join
+
   - section_id: features
     component: FeaturesBlock
     type: featuresblock
     bg: gray
-    title: Features
+    title: Your next project is minutes away
     subtitle: >-
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a metus
-      quis lorem malesuada luctus.
+      
     featureslist:
-      - title: The Best Feature of Your Services
+      - title: Git hosting integration
         image: images/feature1.png
         content: >-
-          Nam pulvinar ante eu ultricies volutpat. Aenean hendrerit, eros sed
-          aliquet luctus, lorem risus volutpat dolor, nec dignissim diam neque
-          consequat ex.
+          Connect your Git hosting account and start coding.
         actions:
-          - label: Learn More
-            url: /features
-      - title: Awesome Feature of Your Services
+          - label: JOIN BETA
+            url: /join
+
+      - title: Cloud provider integration
         image: images/feature2.png
         content: >-
-          Etiam vel urna sed massa egestas vulputate eu a velit. Sed ut nisl nec
-          sapien interdum luctus. Cras rhoncus condimentum metus sit amet
-          auctor.
+          Connect your cloud prodiver account to let the deployment flow.
         actions:
-          - label: Learn More
-            url: /features
-      - title: Cool Feature of Your Services
-        image: images/feature3.png
-        content: >-
-          In ante enim, lobortis quis congue vel, finibus sit amet mi. Aenean
-          quis venenatis sem. Proin eget massa id metus eleifend maximus sit
-          amet nec urna.
-        actions:
-          - label: Learn More
-            url: /features
+          - label: JOIN BETA
+            url: /join
   - section_id: reviews
     component: ReviewsBlock
     type: reviewsblock
@@ -73,19 +60,20 @@ sections:
         content: >-
           Integer consectetur purus neque, ac porttitor enim convallis vitae.
           Interdum et malesuada fames ac ante ipsum primis in faucibus.
+
   - section_id: call-to-action
     component: CtaBlock
     type: ctablock
-    title: This Is Call To Action Block!
-    subtitle: This is an optional description for the call to action block.
+    title: Your Next Project is Mintues Away!
+    # subtitle: This is an optional description for the call to action block.
     actions:
-      - label: Get Started
-        url: /signup
-  - section_id: recent-posts
-    component: PostsBlock
-    type: postsblock
-    bg: gray
-    title: Latest Posts
+      - label: JOIN BETA
+        url: /join
+  # - section_id: recent-posts
+  #   component: PostsBlock
+  #   type: postsblock
+  #   bg: gray
+  #   title: Latest Posts
 menus:
   main:
     weight: 1
