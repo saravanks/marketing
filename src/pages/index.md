@@ -4,7 +4,7 @@ sections:
   - section_id: hero
     component: HeroBlock
     type: heroblock
-    image: images/demo.gif
+    image: 
     title: Build Modern Applications in Minutes
     content: >-
       Combined with all your favorite tools
@@ -16,25 +16,18 @@ sections:
     component: FeaturesBlock
     type: featuresblock
     bg: gray
-    title: Your next project is minutes away
-    subtitle: >-
       
     featureslist:
-      - title: Git hosting integration
+      - title: Git integration
         image: images/feature1.png
         content: >-
-          Connect your Git hosting account and start coding.
-        actions:
-          - label: JOIN BETA
-            url: /join
-
-      - title: Cloud provider integration
+          Connect your Git account and start coding.
+          
+      - title: Cloud support
         image: images/feature2.png
         content: >-
-          Connect your cloud prodiver account to let the deployment flow.
-        actions:
-          - label: JOIN BETA
-            url: /join
+          Connect your cloud account and let the deployment flow.
+      
   # - section_id: reviews
   #   component: ReviewsBlock
   #   type: reviewsblock
@@ -64,8 +57,7 @@ sections:
   - section_id: call-to-action
     component: CtaBlock
     type: ctablock
-    title: Your Next Project is Mintues Away!
-    subtitle: Join the BETA to stay update on the latest Altostra news.
+    title: Your Next Project is Mintues Away
     actions:
       - label: JOIN BETA
         url: /join

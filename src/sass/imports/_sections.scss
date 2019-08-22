@@ -191,7 +191,7 @@
   position: relative;
 
   &:before {
-    color: _palette(accent);
+    color: _palette(accent-orange);
     content: "\201C";
     display: block;
     font-size: 2.66667rem;
@@ -288,11 +288,11 @@
 
   &.highlight {
     .plan-inside {
-      border: 2px solid _palette(accent);
+      border: 2px solid _palette(accent-orange);
     }
 
     .button {
-      background: _palette(accent);
+      background: _palette(accent-orange);
       color: #fff;
       -webkit-transition: opacity .2s ease-in;
       transition: opacity .2s ease-in;
@@ -510,9 +510,9 @@
   }
 
   &.bg-accent {
-    background: _palette(accent);
-    background: -webkit-linear-gradient(to right,_palette(accent), _palette(accent-alt));
-    background: linear-gradient(to right,_palette(accent), _palette(accent-alt));
+    background: _palette(accent-orange);
+    background: -webkit-linear-gradient(to right top,_palette(accent-orange), _palette(accent-purple), _palette(accent-purple-alt));
+    background: linear-gradient(to right top,_palette(accent-orange), _palette(accent-purple), _palette(accent-purple-alt));
     color: #fff;
 
     .block-title {

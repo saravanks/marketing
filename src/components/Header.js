@@ -17,7 +17,8 @@ export default class Header extends React.Component {
                       </Link>
                     </p>
                     }
-                    {((_.get(this.props, 'pageContext.frontmatter.template') === 'home') || (_.get(this.props, 'pageContext.frontmatter.template') === 'blog')) ? 
+
+                    {(_.get(this.props, 'pageContext.frontmatter.template') === 'blog') ?
                     <h1 class="site-title"><Link to={safePrefix('/')}>{_.get(this.props, 'pageContext.site.siteMetadata.header.title')}</Link></h1>
                      : 
                     <p class="site-title"><Link to={safePrefix('/')}>{_.get(this.props, 'pageContext.site.siteMetadata.header.title')}</Link></p>
