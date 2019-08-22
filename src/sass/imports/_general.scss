@@ -248,9 +248,9 @@ input[type="submit"],
 input[type="button"],
 input[type="reset"],
 a.button {
-  background: _palette(accent);
+  background: _palette(accent-orange);
   border-radius: 3px;
-  border: 2px solid _palette(accent);
+  border: 2px solid _palette(accent-orange);
   box-sizing: border-box;
   color: #fff;
   display: inline-block;

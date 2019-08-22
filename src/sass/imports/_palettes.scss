@@ -41,6 +41,12 @@
     background: #fff;
     border-color: transparent;
     color: _palette(primary);
+
+    &:hover,
+    &:focus,
+    &:active {
+      opacity: 0.9;
+    }
   }
 
   .underline {

@@ -4,7 +4,7 @@ sections:
   - section_id: hero
     component: HeroBlock
     type: heroblock
-    image: 
+    image: images/feature1.png
     title: Build Modern Applications in Minutes
     content: >-
       Combined with all your favorite tools
