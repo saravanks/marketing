@@ -249,7 +249,7 @@ input[type="button"],
 input[type="reset"],
 a.button {
   background: _palette(accent-orange);
-  border-radius: 3px;
+  border-radius: 1.75em;
   border: 2px solid _palette(accent-orange);
   box-sizing: border-box;
   color: #fff;
@@ -260,7 +260,6 @@ a.button {
   padding: 0.5em 30px;
   -webkit-transition: opacity .15s ease-in-out;
   transition: opacity .15s ease-in-out;
-  border-radius: 1.75em;
 
   &:hover,
   &:focus,
