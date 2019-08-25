@@ -125,7 +125,7 @@
 
 /* Call to Action */
 .cta-block {
-  background:  _palette(bg) !important;
+  background:  _palette(bg);
 
   .block-title {
     margin: 0 0 0.25rem;
@@ -515,7 +515,7 @@
     background: _palette(accent-orange);
     background: -webkit-linear-gradient(to right top,_palette(accent-orange), _palette(accent-purple), _palette(accent-purple-alt));
     background: linear-gradient(to right top,_palette(accent-orange), _palette(accent-purple), _palette(accent-purple-alt));
-    //color: #fff;
+    color: #fff;
 
     .block-title {
       color: inherit;

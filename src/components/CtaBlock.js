@@ -17,14 +17,14 @@ export default class CtaBlock extends React.Component {
                     </p>
                     }
                   </div>
-                  {_.get(this.props, 'section.actions') &&
-                  }
                 </div>
+                {_.get(this.props, 'section.actions') &&
                 <div class="cell block-buttons">
                     {_.map(_.get(this.props, 'section.actions'), (action, action_idx) => (
                     <Link key={action_idx} to={safePrefix(_.get(action, 'url'))} class="button white large">{_.get(action, 'label')}</Link>
                 ))}
                 </div>
+                }
               </div>
             </section>
         );
