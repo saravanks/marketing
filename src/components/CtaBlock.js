@@ -10,7 +10,7 @@ export default class CtaBlock extends React.Component {
               <div class="inner-large">
                 <div class="grid">
                   <div class="cell block-content">
-                    <h3 class="block-title">{_.get(this.props, 'section.title')}</h3>
+                    <h4 class="block-title">{_.get(this.props, 'section.title')}</h4>
                     {_.get(this.props, 'section.subtitle') && 
                     <p class="block-subtitle">
                       {htmlToReact(_.get(this.props, 'section.subtitle'))}
