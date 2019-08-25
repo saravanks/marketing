@@ -5,7 +5,7 @@ sections:
     component: HeroBlock
     type: heroblock
     image: images/feature1.png
-    title: Build Modern Applications in Minutes
+    title: Build Modern Cloud Applications in Minutes
     content: >-
       Combined with all your favorite tools
     actions:
@@ -19,12 +19,12 @@ sections:
       
     featureslist:
       - title: Git integration
-        image: images/feature1.png
+        image: images/git.png
         content: >-
           Connect your Git account and start coding.
           
       - title: Cloud support
-        image: images/feature2.png
+        image: images/cloud_providers.png
         content: >-
           Connect your cloud account and let the deployment flow.
       
