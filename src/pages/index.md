@@ -66,9 +66,9 @@ sections:
   #   type: postsblock
   #   bg: gray
   #   title: Latest Posts
-menus:
-  main:
-    weight: 1
-    title: Home
-template: home
+# menus:
+#   main:
+#     weight: 1
+#     title: Home
+# template: home
 ---
