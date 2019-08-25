@@ -59,7 +59,7 @@ sections:
     type: ctablock
     title: Your Next Project is Mintues Away
     actions:
-      - label: JOIN BETA
+      - label: Create your first project
         url: /join
   # - section_id: recent-posts
   #   component: PostsBlock

@@ -10,7 +10,7 @@ export default class CtaBlock extends React.Component {
               <div class="inner-large">
                 <div class="grid">
                   <div class="cell block-content">
-                    <h2 class="block-title">{_.get(this.props, 'section.title')}</h2>
+                    <h3 class="block-title">{_.get(this.props, 'section.title')}</h3>
                     {_.get(this.props, 'section.subtitle') && 
                     <p class="block-subtitle">
                       {htmlToReact(_.get(this.props, 'section.subtitle'))}
@@ -21,7 +21,7 @@ export default class CtaBlock extends React.Component {
                 {_.get(this.props, 'section.actions') &&
                 <div class="cell block-buttons">
                     {_.map(_.get(this.props, 'section.actions'), (action, action_idx) => (
-                    <Link key={action_idx} to={safePrefix(_.get(action, 'url'))} class="button white large">{_.get(action, 'label')}</Link>
+                    <Link key={action_idx} to={safePrefix(_.get(action, 'url'))} class="button">{_.get(action, 'label')}</Link>
                 ))}
                 </div>
                 }
