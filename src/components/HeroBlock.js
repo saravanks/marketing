@@ -2,6 +2,7 @@ import React from 'react';
 import _ from 'lodash';
 
 import {safePrefix, markdownify, Link} from '../utils';
+import JoinDialog from './JoinDialog';
 
 export default class HeroBlock extends React.Component {
     render() {
