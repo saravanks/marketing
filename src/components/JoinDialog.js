@@ -8,9 +8,10 @@ import Recaptcha from 'react-recaptcha';
 
 export default function JoinDialog({ buttonText, buttonSize = '', buttonColor='' }) {
   const [open, setOpen] = React.useState(false);
+  const [insurance, setInsurance] = React.useState('');
   const [name, setName] = React.useState('');
   const [email, setEmail] = React.useState('');
-  const [recaptchaVerified, setRecaptchaVerified] = React.useState(false)
+  const [recaptcha, setRecaptcha] = React.useState('')
   const [validSubmitAttempted, setValidSubmitAttempted] = React.useState(false)
   const form = React.createRef();
 
@@ -22,7 +23,7 @@ export default function JoinDialog({ buttonText, buttonSize = '', buttonColor=''
     setOpen(false);
     setName('');
     setEmail('');
-    setRecaptchaVerified(false);
+    setRecaptcha('');
     setValidSubmitAttempted(false);
   }
 
@@ -30,8 +31,22 @@ export default function JoinDialog({ buttonText, buttonSize = '', buttonColor=''
     if (form.current.reportValidity()) {
       setValidSubmitAttempted(true);
 
-      if (recaptchaVerified) {
-        console.log('submit', name, email)
+      if (recaptcha) {
+        fetch('https://at8732o4l6.execute-api.us-east-1.amazonaws.com/Prod/signup', {
+          method: 'POST',
+          mode: 'cors',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/vnd.altostra+json;version=1.0'
+          },
+          cache: 'no-cache',
+          body: JSON.stringify({
+            email,
+            name,
+            insurance,
+            captcha: recaptcha
+          })
+        })
 
         handleClose()
       }
@@ -50,9 +65,9 @@ export default function JoinDialog({ buttonText, buttonSize = '', buttonColor=''
           {/* <DialogContentText>
             Join our awesome Beta!
           </DialogContentText> */}
-            <form ref={form} name="joinForm" action="#" netlify-honeypot="bot-field" data-netlify="true" id="join-form" className="join-form">
+            <form ref={form} name="joinForm" action="#" id="join-form" className="join-form">
               <p className="screen-reader-text">
-                <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+                <label>Don't fill this out if you're human: <input name="insurance-field" onChange={e => setInsurance(e.target.value)} value={insurance} /></label>
               </p>
               
               <p className="form-row">
@@ -66,11 +81,11 @@ export default function JoinDialog({ buttonText, buttonSize = '', buttonColor=''
               </p>
 
               <Recaptcha
-                className={`recaptcha fix-height ${validSubmitAttempted && !recaptchaVerified ? 'required' : ''}`}
+                className={`recaptcha fix-height ${validSubmitAttempted && !recaptcha ? 'required' : ''}`}
                 size="compact"
                 sitekey="6LcpwrQUAAAAACiIUAogkhK9N0Es4_wZAh2J7CYE"
-                verifyCallback={() => setRecaptchaVerified(true)}
-                expiredCallbacd={() => setRecaptchaVerified(false)}
+                verifyCallback={response => setRecaptcha(response)}
+                expiredCallbacd={() => setRecaptcha('')}
               />
             </form>
         </DialogContent>
