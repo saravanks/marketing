@@ -10,6 +10,8 @@ export default function JoinDialog({ buttonText, buttonSize = '', buttonColor=''
   const [open, setOpen] = React.useState(false);
   const [name, setName] = React.useState('');
   const [email, setEmail] = React.useState('');
+  const [recaptchaVerified, setRecaptchaVerified] = React.useState(false)
+  const [validSubmitAttempted, setValidSubmitAttempted] = React.useState(false)
   const form = React.createRef();
 
   function handleClickOpen() {
@@ -18,11 +20,21 @@ export default function JoinDialog({ buttonText, buttonSize = '', buttonColor=''
 
   function handleClose() {
     setOpen(false);
+    setName('');
+    setEmail('');
+    setRecaptchaVerified(false);
+    setValidSubmitAttempted(false);
   }
 
   function handleSubmit() {
     if (form.current.reportValidity()) {
-      console.log(name, email)
+      setValidSubmitAttempted(true);
+
+      if (recaptchaVerified) {
+        console.log('submit', name, email)
+
+        handleClose()
+      }
     }
   }
 
@@ -53,7 +65,13 @@ export default function JoinDialog({ buttonText, buttonSize = '', buttonColor=''
                 <input type="email" name="email" className="form-input" required onChange={e => setEmail(e.target.value)} value={email} />
               </p>
 
-              <Recaptcha size="compact" sitekey='6LcpwrQUAAAAACiIUAogkhK9N0Es4_wZAh2J7CYE' className="recaptcha fix-height" />
+              <Recaptcha
+                className={`recaptcha fix-height ${validSubmitAttempted && !recaptchaVerified ? 'required' : ''}`}
+                size="compact"
+                sitekey="6LcpwrQUAAAAACiIUAogkhK9N0Es4_wZAh2J7CYE"
+                verifyCallback={() => setRecaptchaVerified(true)}
+                expiredCallbacd={() => setRecaptchaVerified(false)}
+              />
             </form>
         </DialogContent>
         <DialogActions>
