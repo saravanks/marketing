@@ -2,6 +2,13 @@ module.exports = {
     pathPrefix: '/',
     siteMetadata: require('./site-metadata.json'),
     plugins: [
+        {
+            resolve: `gatsby-plugin-recaptcha`,
+            options: {
+                async: true,
+                defer: true
+            }
+        },
         `gatsby-plugin-react-helmet`,
         `gatsby-source-data`,
         {

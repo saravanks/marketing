@@ -36,6 +36,7 @@ export default class Header extends React.Component {
                         </li>
                         ))}
                         {_.get(this.props, 'pageContext.site.siteMetadata.header.menu.actions') && 
+                         _.get(this.props, 'pageContext.frontmatter.template') !== 'join' &&
                           _.map(_.get(this.props, 'pageContext.site.siteMetadata.header.menu.actions'), (action, action_idx) => (
                           <li key={action_idx} class="menu-item menu-button">
                             <Link to={safePrefix(_.get(action, 'url'))} class="button">{_.get(action, 'label')}</Link>
