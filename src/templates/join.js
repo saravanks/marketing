@@ -7,8 +7,9 @@ import {htmlToReact, safePrefix} from '../utils';
 
 export default class Join extends React.Component {
     constructor() {
+        super()
         this.state = {
-            recaptchaVerified = false
+            recaptchaVerified: false
         }
     }
 
