@@ -2,6 +2,7 @@ import React from 'react';
 import _ from 'lodash';
 
 import {Link, safePrefix} from '../utils';
+import JoinDialog from '../components/JoinDialog';
 
 export default class Header extends React.Component {
     render() {
@@ -35,14 +36,17 @@ export default class Header extends React.Component {
                           <Link to={safePrefix(_.get(item, 'url'))}>{_.get(item, 'title')}</Link>
                         </li>
                         ))}
-                        {_.get(this.props, 'pageContext.site.siteMetadata.header.menu.actions') && 
+                        {/* {_.get(this.props, 'pageContext.site.siteMetadata.header.menu.actions') && 
                          _.get(this.props, 'pageContext.frontmatter.template') !== 'join' &&
                           _.map(_.get(this.props, 'pageContext.site.siteMetadata.header.menu.actions'), (action, action_idx) => (
                           <li key={action_idx} class="menu-item menu-button">
                             <Link to={safePrefix(_.get(action, 'url'))} class="button">{_.get(action, 'label')}</Link>
                           </li>
                           ))
-                        }
+                        } */}
+                        <li key="join-button" class="menu-item menu-button">
+                          <JoinDialog buttonText="JOIN BETA" />
+                        </li>
                       </ul>
                     </div>
                   </nav>

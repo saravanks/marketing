@@ -20,11 +20,13 @@ export default class HeroBlock extends React.Component {
                       {markdownify(_.get(this.props, 'section.content'))}
                     </div>
                     {_.get(this.props, 'section.actions') && 
-                    <p class="block-buttons">
-                      {_.map(_.get(this.props, 'section.actions'), (action, action_idx) => (
-                      <Link key={action_idx} to={safePrefix(_.get(action, 'url'))} class="button white large">{_.get(action, 'label')}</Link>
-                      ))}
-                    </p>
+                    <JoinDialog buttonText="JOIN BETA" buttonColor="white" buttonSize="large" />
+                    // <p class="block-buttons">
+                    //   {_.map(_.get(this.props, 'section.actions'), (action, action_idx) => (
+                    //   <Link key={action_idx} to={safePrefix(_.get(action, 'url'))} class="button white large">{_.get(action, 'label')}</Link>
+                    //   ))}
+                      
+                    // </p>
                     }
                   </div>
                 </div>

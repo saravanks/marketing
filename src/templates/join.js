@@ -6,14 +6,7 @@ import {Layout} from '../components/index';
 import {htmlToReact, safePrefix} from '../utils';
 
 export default class Join extends React.Component {
-    constructor() {
-        super()
-        this.state = {
-            recaptchaVerified: false
-        }
-    }
-
-    render() {
+     render() {
         return (
             <Layout {...this.props}>
             <div className="outer">
@@ -49,13 +42,11 @@ export default class Join extends React.Component {
                         <input type="email" name="email" className="form-input"/>
                       </p>
 
-                      <Recaptcha 
-                        verifyCallback={() => this.recaptchaVerified = true}
-                        sitekey='6LcpwrQUAAAAACiIUAogkhK9N0Es4_wZAh2J7CYE' />
+                      <Recaptcha sitekey='6LcpwrQUAAAAACiIUAogkhK9N0Es4_wZAh2J7CYE' />
                       <br/>
                       
                       <p className="form-row form-submit">
-                        <button type="submit" className="button" disabled={!this.recaptchaVerified}>JOIN</button>
+                        <button type="submit" className="button">JOIN</button>
                       </p>
                     </form>
                   </div>
