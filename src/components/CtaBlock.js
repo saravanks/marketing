@@ -6,7 +6,7 @@ import {htmlToReact, Link, safePrefix} from '../utils';
 export default class CtaBlock extends React.Component {
     render() {
         return (
-            <section id={_.get(this.props, 'section.section_id')} class="block cta-block bg-accent outer">
+            <section id={_.get(this.props, 'section.section_id')} class="block cta-block outer">
               <div class="inner-large">
                 <div class="grid">
                   <div class="cell block-content">

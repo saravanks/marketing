@@ -125,14 +125,9 @@
 
 /* Call to Action */
 .cta-block {
-  background:  _palette(bg);
 
   .block-title {
     margin: 0 0 0.25rem;
-  }
-
-  .cell {
-    text-align: center;
   }
 
   @media only screen and (min-width: 741px) {
@@ -150,7 +145,7 @@
       box-sizing: border-box;
       margin-left: 0.83333rem;
       margin-right: 0.83333rem;
-      text-align: left;
+      text-align: center;
     }
 
     .block-content {

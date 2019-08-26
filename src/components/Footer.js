@@ -9,6 +9,14 @@ export default class Footer extends React.Component {
     render() {
         return (
             <footer id="colophon" class="site-footer">
+              <div class="wave-footer" aria-hidden="true">
+                <svg width="2060" height="137" viewBox="0 0 2060 137" xmlns="http://www.w3.org/2000/svg">
+                  <g fill="none" fill-rule="evenodd">
+                    <path class="path1" d="M0 0c393.11 119.844 807.532 100.397 1131.565 45.246C1397.404 0 1603.94-26.618 2060 49.769v51.317C909.022-58.747 1032.495 251.14 0 87.94V0z" fill="#E5E6FF">
+                    </path><path class="path2" d="M0 0h2060v63.824C1026.921-96.01 1177.132 224.25 0 50.822V0z" fill="#F7F9FB"></path>
+                  </g>
+                </svg>
+              </div>
               <div class="footer-top outer">
                 <div class="inner">
                   <div class="footer-widgets">
@@ -68,9 +76,6 @@ export default class Footer extends React.Component {
                 <div class="inner">
                   {htmlToReact(_.get(this.props, 'pageContext.site.siteMetadata.footer.content'))}
                   &nbsp;
-                  {_.map(_.get(this.props, 'pageContext.site.siteMetadata.footer.links'), (link, link_idx) => (<React.Fragment key={link_idx}>
-                  <Link key={link_idx} to={_.get(link, 'url')} {...(_.get(link, 'new_window') ? {target: '_blank', rel: 'noopener'} : null)}>{_.get(link, 'text')}</Link>.
-                  </React.Fragment>))}
                 </div>
               </div>
             </footer>
