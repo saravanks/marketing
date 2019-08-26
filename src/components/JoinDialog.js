@@ -1,11 +1,10 @@
 import React from 'react';
-import Button from '@material-ui/core/Button';
-import TextField from '@material-ui/core/TextField';
 import Dialog from '@material-ui/core/Dialog';
 import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
+import Recaptcha from 'react-recaptcha';
 
 export default function JoinDialog({ buttonText, buttonSize = '', buttonColor='' }) {
   const [open, setOpen] = React.useState(false);
@@ -33,12 +32,12 @@ export default function JoinDialog({ buttonText, buttonSize = '', buttonColor=''
       {buttonText}
       </button>
 
-      <Dialog open={open} onClose={handleClose} aria-labelledby="form-dialog-title">
-        <DialogTitle id="form-dialog-title">Subscribe</DialogTitle>
+      <Dialog scroll="body" open={open} onClose={handleClose} aria-labelledby="form-dialog-title">
+        <DialogTitle id="form-dialog-title">Join</DialogTitle>
         <DialogContent>
-          <DialogContentText>
+          {/* <DialogContentText>
             Join our awesome Beta!
-          </DialogContentText>
+          </DialogContentText> */}
             <form ref={form} name="joinForm" action="#" netlify-honeypot="bot-field" data-netlify="true" id="join-form" className="join-form">
               <p className="screen-reader-text">
                 <label>Don't fill this out if you're human: <input name="bot-field" /></label>
@@ -53,6 +52,8 @@ export default function JoinDialog({ buttonText, buttonSize = '', buttonColor=''
                 <label className="form-label">Email address</label>
                 <input type="email" name="email" className="form-input" required onChange={e => setEmail(e.target.value)} value={email} />
               </p>
+
+              <Recaptcha size="compact" sitekey='6LcpwrQUAAAAACiIUAogkhK9N0Es4_wZAh2J7CYE' className="recaptcha fix-height" />
             </form>
         </DialogContent>
         <DialogActions>
