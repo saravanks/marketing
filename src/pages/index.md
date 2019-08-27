@@ -5,7 +5,7 @@ sections:
     component: HeroBlock
     type: heroblock
     image: images/feature1.png
-    title: Build Modern Cloud Applications in Minutes
+    title: Build Modern Applications in Minutes
     content: >-
       Combined with all your favorite tools
     actions:
