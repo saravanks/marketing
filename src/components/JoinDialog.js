@@ -10,6 +10,8 @@ export default function JoinDialog({ buttonText, buttonSize = '', buttonColor=''
   const [open, setOpen] = React.useState(false);
   const [insurance, setInsurance] = React.useState('');
   const [name, setName] = React.useState('');
+  const [organization, setOrganization] = React.useState('');
+  const [job, setJob] = React.useState('');
   const [email, setEmail] = React.useState('');
   const [recaptcha, setRecaptcha] = React.useState('')
   const [validSubmitAttempted, setValidSubmitAttempted] = React.useState(false)
@@ -23,6 +25,8 @@ export default function JoinDialog({ buttonText, buttonSize = '', buttonColor=''
     setOpen(false);
     setName('');
     setEmail('');
+    setJob('');
+    setOrganization('');
     setRecaptcha('');
     setValidSubmitAttempted(false);
   }
@@ -65,19 +69,62 @@ export default function JoinDialog({ buttonText, buttonSize = '', buttonColor=''
           {/* <DialogContentText>
             Join our awesome Beta!
           </DialogContentText> */}
-            <form ref={form} name="joinForm" action="#" id="join-form" className="join-form">
+            <form autoComplete="on" ref={form} name="joinForm" action="#" id="join-form" className="join-form">
               <p className="screen-reader-text">
-                <label>Don't fill this out if you're human: <input name="insurance-field" onChange={e => setInsurance(e.target.value)} value={insurance} /></label>
+                <label>Don't fill this out if you're human: <input id="join-insurance" name="insurance-field" onChange={e => setInsurance(e.target.value)} value={insurance} /></label>
               </p>
               
               <p className="form-row">
                 <label className="form-label">Name</label>
-                <input type="text" name="name" className="form-input" required onChange={e => setName(e.target.value)} value={name} />
+                <input
+                  className="form-input"
+                  name="name"
+                  type="text"
+                  required
+                  autoComplete="name"
+                  autoFocus
+                  onChange={e => setName(e.target.value)}
+                  value={name}
+                />
+              </p>
+
+              <p className="form-row">
+                <label className="form-label">Job Title</label>
+                <input
+                  className="form-input"
+                  name="job"
+                  type="text"
+                  required
+                  autoComplete="organization-title"
+                  onChange={e => setJob(e.target.value)}
+                  value={job}
+                />
+              </p>
+
+              <p className="form-row">
+                <label className="form-label">Company</label>
+                <input
+                  className="form-input"
+                  name="company"
+                  type="text"
+                  required
+                  autoComplete="organization"
+                  onChange={e => setOrganization(e.target.value)}
+                  value={organization}
+                />
               </p>
               
               <p className="form-row">
                 <label className="form-label">Email address</label>
-                <input type="email" name="email" className="form-input" required onChange={e => setEmail(e.target.value)} value={email} />
+                <input
+                  className="form-input"
+                  name="email"
+                  type="email"
+                  required
+                  autoComplete="email"
+                  onChange={e => setEmail(e.target.value)}
+                  value={email}
+                />
               </p>
 
               <Recaptcha

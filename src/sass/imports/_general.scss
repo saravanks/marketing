@@ -344,6 +344,23 @@ a.button.large {
   }
 }
 
+/* Join Form */
+.join-form {
+  .form-row {
+    margin-bottom: 0.2em;
+  }
+
+  .form-label {
+    font-size: 0.7em;
+  }
+
+  .form-input {
+    height: 2em;
+    padding: 2px 8px;
+    font-size: 0.7em;
+  }
+}
+
 /* Subscribe form */
 .subscribe-form {
   margin-bottom: 1.66667rem;
