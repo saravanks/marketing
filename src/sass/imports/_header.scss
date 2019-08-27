@@ -2,9 +2,11 @@
  * Site Header
  * ----------------------------------------------------------------------------
  */
+
 .site-header {
-  background: #fff;
-  color: _palette(secondary);
+  background: transparent;
+  width: -webkit-fill-available;
+  color: #fff;
   padding-bottom: 1.33333em;
   padding-top: 1.33333em;
 }
@@ -94,9 +96,8 @@
 @supports (position: sticky) or (position: -webkit-sticky) {
   @media only screen and (min-width: 801px) {
     .site-header {
-      background: #fff;
-      position: -webkit-sticky;
-      position: sticky;
+      background: transparent;
+      position: absolute;
       top:0;
       z-index: 999;
     }
