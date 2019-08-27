@@ -33,7 +33,7 @@ export default class HeroBlock extends React.Component {
                 </div>
               </div>
                 <div class="wave" style={{position:'relative', bottom:'-10px'}} aria-hidden="true">
-                    <svg width="auto" height="auto" viewBox="0 0 2060 187" xmlns='http://www.w3.org/2000/svg'>
+                    <svg viewBox="0 0 2060 187" xmlns='http://www.w3.org/2000/svg'>
                         <g fill="none" fill-rule="evenodd">
                             <path class="path1" d="M2060 0v62.124C1030 62.124 1030 177 0 177v-6.544C1060.445 177 1009.883 0 2060 0z" fill="#E5E6FF"></path>
                             <path class="path2" d="M2060 186.859H0v-11.047C1030 175.812 1071.994 29.39 2060 61v125.859z" fill="#f7f9fb"></path>

@@ -139,7 +139,7 @@ export default function JoinDialog({ buttonText, buttonSize = '', buttonColor=''
             </form>
         </DialogContent>
         <DialogActions>
-          <button className="button white secondary" onClick={handleClose}>Close</button>
+          {/* <button className="button white secondary" onClick={handleClose}>Close</button> */}
           <button className="button" onClick={handleSubmit}>Submit</button>
         </DialogActions>
       </Dialog>
