@@ -10,8 +10,8 @@ export default function JoinDialog({ buttonText, buttonSize = '', buttonColor=''
   const [open, setOpen] = React.useState(false);
   const [insurance, setInsurance] = React.useState('');
   const [name, setName] = React.useState('');
-  const [organization, setOrganization] = React.useState('');
-  const [job, setJob] = React.useState('');
+  const [company, setCompany] = React.useState('');
+  const [jobTitle, setJobTitle] = React.useState('');
   const [email, setEmail] = React.useState('');
   const [recaptcha, setRecaptcha] = React.useState('')
   const [validSubmitAttempted, setValidSubmitAttempted] = React.useState(false)
@@ -25,8 +25,8 @@ export default function JoinDialog({ buttonText, buttonSize = '', buttonColor=''
     setOpen(false);
     setName('');
     setEmail('');
-    setJob('');
-    setOrganization('');
+    setJobTitle('');
+    setCompany('');
     setRecaptcha('');
     setValidSubmitAttempted(false);
   }
@@ -47,6 +47,8 @@ export default function JoinDialog({ buttonText, buttonSize = '', buttonColor=''
           body: JSON.stringify({
             email,
             name,
+            company,
+            jobTitle,
             insurance,
             captcha: recaptcha
           })
@@ -96,8 +98,8 @@ export default function JoinDialog({ buttonText, buttonSize = '', buttonColor=''
                   type="text"
                   required
                   autoComplete="organization-title"
-                  onChange={e => setJob(e.target.value)}
-                  value={job}
+                  onChange={e => setJobTitle(e.target.value)}
+                  value={jobTitle}
                 />
               </p>
 
@@ -109,8 +111,8 @@ export default function JoinDialog({ buttonText, buttonSize = '', buttonColor=''
                   type="text"
                   required
                   autoComplete="organization"
-                  onChange={e => setOrganization(e.target.value)}
-                  value={organization}
+                  onChange={e => setCompany(e.target.value)}
+                  value={company}
                 />
               </p>
               
