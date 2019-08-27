@@ -248,6 +248,7 @@ input[type="submit"],
 input[type="button"],
 input[type="reset"],
 a.button {
+  font-weight: 700;
   background: _palette(accent-orange);
   border-radius: 1.75em;
   border: 2px solid _palette(accent-orange);
