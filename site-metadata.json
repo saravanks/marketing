@@ -1,4 +1,10 @@
 {
+    "title": "Altostra",
+    "description": "",
+    "url": "https://www.altostra.com",
+    "image": "/images/altostra-logo.png",
+    "author": "Altostra, Inc",
+    "twitter": "@goaltostra",
     "palette": "blue",
     "header": {
         "title": "Altostra",
@@ -31,6 +37,5 @@
                 "new_window": false
             }
         ]
-    },
-    "title": "Altostra"
+    }
 }
