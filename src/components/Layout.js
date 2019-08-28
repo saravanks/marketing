@@ -5,13 +5,16 @@ import _ from 'lodash';
 import {safePrefix} from '../utils';
 import Header from './Header';
 import Footer from './Footer';
+import SEO from '../components/SEO';
 
 export default class Body extends React.Component {
     render() {
+        const title = `${_.get(this.props, 'pageContext.frontmatter.title') && _.get(this.props, 'pageContext.frontmatter.title') + ' | '}${_.get(this.props, 'pageContext.site.siteMetadata.title')}`
         return (
             <React.Fragment>
+                <SEO title={title}/>
                 <Helmet>
-                    <title>{_.get(this.props, 'pageContext.frontmatter.title') && _.get(this.props, 'pageContext.frontmatter.title') + ' | '}{_.get(this.props, 'pageContext.site.siteMetadata.title')}</title>
+                    <title>{title}</title>
                     <meta charset="utf-8"/>
                     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                     <meta name="google" content="notranslate" />
