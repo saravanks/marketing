@@ -33,8 +33,9 @@ function SEO({ description, lang, meta, title }) {
       htmlAttributes={{
         lang,
       }}
-      title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
+      // The title comes from the Layout component. No need to override it here.
+      // title={title}
+      // titleTemplate={`%s | ${site.siteMetadata.title}`}
       meta={[
         {
           name: `description`,
@@ -48,6 +49,10 @@ function SEO({ description, lang, meta, title }) {
           property: `og:description`,
           content: metaDescription,
         },
+        // {
+        //   property: `og:image`,
+        //   content: ,
+        // },
         {
           property: `og:type`,
           content: `website`,
@@ -55,6 +60,10 @@ function SEO({ description, lang, meta, title }) {
         {
           name: `twitter:card`,
           content: `summary`,
+        },
+        {
+          name: `twitter:site:id`,
+          content: site.siteMetadata.twitter,
         },
         {
           name: `twitter:creator`,
