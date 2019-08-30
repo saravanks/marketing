@@ -412,6 +412,9 @@ img {
 }
 
 /* Text meant only for screen readers */
+.site-logo img {
+  max-height: 45px !important; }
+
 .screen-reader-text,
 .site-logo + .site-title {
   border: 0;
