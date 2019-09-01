@@ -6,7 +6,7 @@ import FeaturesBlock from './FeaturesBlock';
 import Footer from './Footer';
 import Header from './Header';
 import HeroBlock from './HeroBlock';
-import CareersHeroBlock from './CareersHeroBlock';
+import PageHeaderBlock from './PageHeaderBlock';
 import PostsBlock from './PostsBlock';
 import PricingBlock from './PricingBlock';
 import ReviewsBlock from './ReviewsBlock';
@@ -23,7 +23,7 @@ export {
     Footer,
     Header,
     HeroBlock,
-    CareersHeroBlock,
+    PageHeaderBlock,
     PostsBlock,
     PricingBlock,
     ReviewsBlock,
@@ -41,7 +41,7 @@ export default {
     Footer,
     Header,
     HeroBlock,
-    CareersHeroBlock,
+    PageHeaderBlock,
     PostsBlock,
     PricingBlock,
     ReviewsBlock,

@@ -301,12 +301,12 @@ models:
       - type: list
         name: sections
         label: Sections
-        description: Home page sections.
+        description: Careers page sections.
         items:
           type: reference
           labelField: title
           models:
-            - careersheroblock
+            - pageheaderblock
   contact:
     type: page
     label: Contact
@@ -551,14 +551,14 @@ models:
         label: Action Buttons
         items:
           type: action
-  careersheroblock:
+  pageheaderblock:
     type: object
-    label: Careers Hero Section
+    label: Header Section
     extends:
       - section
     fields:
       - name: component
-        default: CareersHeroBlock
+        default: PageHeaderBlock
       - type: markdown
         name: content
         label: Content
