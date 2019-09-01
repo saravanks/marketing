@@ -12,8 +12,8 @@ export default class Careers extends React.Component {
             <Layout {...this.props}>
             <CareersHeroBlock
               id="careers-hero-block"
-              title="We have careers for you!"
-              content="Hi Gal :) Edit me..."
+              title="Careers"
+              content=""
               image="images/feature1.png"
             />
             <div className="outer">

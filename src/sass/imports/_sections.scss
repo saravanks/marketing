@@ -2,7 +2,6 @@
  * Sections
  * ----------------------------------------------------------------------------
  */
-
 section#hero,
 section#careers-hero-block {
   padding-top: 90px;
@@ -126,6 +125,14 @@ section#careers-hero-block {
       padding-left: 68px;
       padding-right: 0;
     }
+  }
+}
+
+/* Careers */
+.careers-hero-block {
+  .block-content {
+    text-align: center;
+    padding-top: 3.33333em;
   }
 }
 

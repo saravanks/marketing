@@ -6,25 +6,20 @@ import {safePrefix, markdownify, Link} from '../utils';
 export default class CareersHeroBlock extends React.Component {
     render() {
         return (
-            <section id={_.get(this.props, 'id')} className="block hero-block bg-accent">
+            <section id={_.get(this.props, 'id')} className="block careers-hero-block bg-accent">
               <div className="inner outer-hero">
                 <div className="grid">
-                  {_.get(this.props, 'image') && 
-                  <div className="cell block-preview">
-                    <img src={safePrefix(_.get(this.props, 'image'))} alt={_.get(this.props, 'title')} />
-                  </div>
-                  }
                   <div className="cell block-content">
-                    <h2 className="block-title underline">{_.get(this.props, 'title')}</h2>
+                    <h2 className="block-title">{_.get(this.props, 'title')}</h2>
                     <div className="block-copy">
                       {markdownify(_.get(this.props, 'content'))}
                     </div>
-                    {_.get(this.props, 'actions') && 
+                    {_.get(this.props, 'actions') &&
                     <p className="block-buttons">
                       {_.map(_.get(this.props, 'actions'), (action, action_idx) => (
                       <Link key={action_idx} to={safePrefix(_.get(action, 'url'))} className="button white large">{_.get(action, 'label')}</Link>
                       ))}
-                      
+
                     </p>
                     }
                   </div>
