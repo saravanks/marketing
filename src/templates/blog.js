@@ -2,7 +2,7 @@ import React from 'react';
 import _ from 'lodash';
 import moment from 'moment-strftime';
 
-import {Layout} from '../components/index';
+import components, {Layout} from '../components/index';
 import {getPages, Link, safePrefix} from '../utils';
 
 export default class Blog extends React.Component {
@@ -10,6 +10,13 @@ export default class Blog extends React.Component {
         let display_posts = _.orderBy(getPages(this.props.pageContext.pages, '/posts'), 'frontmatter.date', 'desc');
         return (
             <Layout {...this.props}>
+            {_.map(_.get(this.props, 'pageContext.frontmatter.sections'), (section, section_idx) => {
+              let GetSectionComponent = components[_.get(section, 'component')];
+              return (
+                <GetSectionComponent key={section_idx} {...this.props} section={section} site={this.props.pageContext.site} />
+              )
+
+            })}
             <div className="outer">
               <div className="inner">
                 <div className="post-feed">
@@ -30,7 +37,7 @@ export default class Blog extends React.Component {
                         </div>
                         <footer className="post-meta">
                           <time className="published"
-                            datetime={moment(_.get(post, 'frontmatter.date')).strftime('%Y-%m-%d %H:%M')}>{moment(_.get(post, 'frontmatter.date')).strftime('%B %d, %Y')}</time>
+                            dateTime={moment(_.get(post, 'frontmatter.date')).strftime('%Y-%m-%d %H:%M')}>{moment(_.get(post, 'frontmatter.date')).strftime('%B %d, %Y')}</time>
                         </footer>
                       </div>
                     </div>

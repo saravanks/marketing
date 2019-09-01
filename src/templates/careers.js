@@ -2,7 +2,7 @@ import React from 'react';
 import _ from 'lodash';
 import moment from 'moment-strftime';
 
-import {Layout, CareersHeroBlock} from '../components/index';
+import components, {Layout} from '../components/index';
 import {getPages, Link, safePrefix} from '../utils';
 
 export default class Careers extends React.Component {
@@ -10,12 +10,17 @@ export default class Careers extends React.Component {
         let display_jobs = _.orderBy(getPages(this.props.pageContext.pages, '/jobs'), 'frontmatter.date', 'desc');
         return (
             <Layout {...this.props}>
-            <CareersHeroBlock
-              id="careers-hero-block"
-              title="Careers"
-              content=""
-              image="images/feature1.png"
-            />
+
+            {/* SECTIONS */}
+            {_.map(_.get(this.props, 'pageContext.frontmatter.sections'), (section, section_idx) => {
+              let GetSectionComponent = components[_.get(section, 'component')];
+              return (
+                <GetSectionComponent key={section_idx} {...this.props} section={section} site={this.props.pageContext.site} />
+              )
+
+            })}
+            {/* /SECTIONS */}
+            
             <div className="outer">
               <div className="inner">
                 <div className="post-feed">

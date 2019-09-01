@@ -1,5 +1,11 @@
 ---
 title: Blog
+sections:
+  - section_id: pageheader
+    component: PageHeaderBlock
+    type: pageheaderblock
+    # image: images/feature1.png
+    title: Blog
 menus:
   main:
     weight: 3
