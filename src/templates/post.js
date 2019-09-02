@@ -2,13 +2,22 @@ import React from 'react';
 import _ from 'lodash';
 import moment from 'moment-strftime';
 
-import {Layout} from '../components/index';
+import components, {Layout} from '../components/index';
 import {safePrefix, htmlToReact} from '../utils';
 
 export default class Post extends React.Component {
     render() {
         return (
             <Layout {...this.props}>
+            {/* SECTIONS */}
+            {_.map(_.get(this.props, 'pageContext.frontmatter.sections'), (section, section_idx) => {
+                let GetSectionComponent = components[_.get(section, 'component')];
+                return (
+                    <GetSectionComponent key={section_idx} {...this.props} section={section} site={this.props.pageContext.site} />
+                    )
+
+                })}
+            {/* /SECTIONS */}
             <div className="outer">
               <div className="inner-medium">
                 <article className="post post-full">
