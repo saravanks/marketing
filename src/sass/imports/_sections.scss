@@ -3,6 +3,23 @@
  * ----------------------------------------------------------------------------
  */
 
+.careers-title {
+  padding-top: 3.33333rem;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.careers-subtitle {
+  padding-top: 1rem;
+  font-size: 1.22rem;
+  text-align: center;
+  .join-us{
+    color: _palette(accent-orange);
+    font-weight: 700;
+  }
+}
+
 .page-header-block>img {
   top: 0;
   left: 0;

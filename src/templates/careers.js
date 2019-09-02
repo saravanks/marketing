@@ -19,8 +19,13 @@ export default class Careers extends React.Component {
               )
 
             })}
-            {/* /SECTIONS */}
-            
+                            {/* /SECTIONS */}
+            <div className="careers-title"> Be Part of the Team
+            </div>
+            <p  className="careers-subtitle">
+                <span className="join-us">Join us </span>
+                <span>to shape the future of cloud development</span>
+            </p>
             <div className="outer">
               <div className="inner">
                 <div className="post-feed">
