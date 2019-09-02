@@ -1,6 +1,6 @@
 ---
 title: UX/UI Lead
-location: Tel Aviv, Israel
+location: Tel Aviv, Israel | Engineering
 sections:
   - section_id: pageheader
     component: PageHeaderBlock

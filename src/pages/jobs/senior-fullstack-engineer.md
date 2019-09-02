@@ -1,6 +1,6 @@
 ---
 title: Senior Full Stack Engineer
-location: Tel Aviv, Israel
+location: Tel Aviv, Israel | Engineering
 sections:
   - section_id: pageheader
     component: PageHeaderBlock
@@ -15,7 +15,7 @@ sections:
 #   Vis accumsan feugiat adipiscing nisl amet adipiscing accumsan blandit accumsan
 #   sapien blandit ac amet faucibus aliquet placerat commodo.
 date: '2019-08-10'
-thumb_img_path: images/10_thumb.jpg
+thumb_img_path: images/bnw_thumb.jpg
 template: post
 ---
 
