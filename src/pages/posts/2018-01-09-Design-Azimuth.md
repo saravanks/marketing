@@ -1,5 +1,13 @@
 ---
 title: Behind the Scenes - The Design of Azimuth
+sections:
+  - section_id: pageheader
+    component: PageHeaderBlock
+    type: pageheaderblock
+    # image: images/feature1.png
+    title: Behind the Scenes - The Design of Azimuth
+    # content: >-
+    #   text...
 excerpt: >-
   Quisque ultrices metus sed libero ultricies condimentum. Suspendisse ut
   faucibus purus. Mauris at pharetra risus.

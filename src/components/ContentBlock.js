@@ -6,23 +6,23 @@ import {safePrefix, markdownify, Link} from '../utils';
 export default class ContentBlock extends React.Component {
     render() {
         return (
-            <section id={_.get(this.props, 'section.section_id')} class={'block text-block bg-' + _.get(this.props, 'section.bg') + ' outer'}>
-              <div class="inner">
-                <div class="grid">
+            <section id={_.get(this.props, 'section.section_id')} className={'block text-block bg-' + _.get(this.props, 'section.bg') + ' outer'}>
+              <div className="inner">
+                <div className="grid">
                   {_.get(this.props, 'section.image') && 
-                  <div class="cell block-preview">
+                  <div className="cell block-preview">
                     <img src={safePrefix(_.get(this.props, 'section.image'))} alt={_.get(this.props, 'section.title')} />
                   </div>
                   }
-                  <div class="cell block-content">
-                    <h2 class="block-title underline">{_.get(this.props, 'section.title')}</h2>
-                    <div class="block-copy">
+                  <div className="cell block-content">
+                    <h2 className="block-title underline">{_.get(this.props, 'section.title')}</h2>
+                    <div className="block-copy">
                       {markdownify(_.get(this.props, 'section.content'))}
                     </div>
                     {_.get(this.props, 'section.actions') && 
-                    <p class="block-buttons">
+                    <p className="block-buttons">
                       {_.map(_.get(this.props, 'section.actions'), (action, action_idx) => (
-                      <Link key={action_idx} to={safePrefix(_.get(action, 'url'))} class="button secondary">{_.get(action, 'label')}</Link>
+                      <Link key={action_idx} to={safePrefix(_.get(action, 'url'))} className="button secondary">{_.get(action, 'label')}</Link>
                       ))}
                     </p>
                     }

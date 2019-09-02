@@ -298,6 +298,15 @@ models:
         name: menus
         label: Careers Menus
         description: Which menus should this page show up in
+      - type: list
+        name: sections
+        label: Sections
+        description: Careers page sections.
+        items:
+          type: reference
+          labelField: title
+          models:
+            - pageheaderblock
   contact:
     type: page
     label: Contact
@@ -529,6 +538,27 @@ models:
     fields:
       - name: component
         default: HeroBlock
+      - type: markdown
+        name: content
+        label: Content
+        description: The text content of the section.
+      - type: image
+        name: image
+        label: Image
+        description: The image of the section.
+      - type: list
+        name: actions
+        label: Action Buttons
+        items:
+          type: action
+  pageheaderblock:
+    type: object
+    label: Header Section
+    extends:
+      - section
+    fields:
+      - name: component
+        default: PageHeaderBlock
       - type: markdown
         name: content
         label: Content

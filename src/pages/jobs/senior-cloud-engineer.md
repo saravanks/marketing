@@ -1,12 +1,21 @@
 ---
 title: Senior Cloud Engineer
+location: Tel Aviv, Israel
+sections:
+  - section_id: pageheader
+    component: PageHeaderBlock
+    type: pageheaderblock
+    image: images/tel-aviv.jpg
+    title: Senior Cloud Engineer
+    # content: >-
+    #   text...
 # subtitle: >-
 #   As the Senior FSE you'll...
 # excerpt: >-
 #   Vis accumsan feugiat adipiscing nisl amet adipiscing accumsan blandit accumsan
 #   sapien blandit ac amet faucibus aliquet placerat commodo.
 date: '2019-08-14'
-thumb_img_path: images/1_thumb.jpg
+thumb_img_path: images/sde_thumb.jpg
 template: post
 ---
 

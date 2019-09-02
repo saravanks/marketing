@@ -1,5 +1,13 @@
 ---
 title: 5 Customer Service Skills that Every Employee Needs
+sections:
+  - section_id: pageheader
+    component: PageHeaderBlock
+    type: pageheaderblock
+    # image: images/feature1.png
+    title: 5 Customer Service Skills that Every Employee Needs
+    # content: >-
+    #   text...
 subtitle: 'Apparently, there are 5 Service Skills that Every Employee Needs'
 excerpt: >-
   Sed nec metus dignissim quam finibus aliquet. Cras luctus, nibh id consequat

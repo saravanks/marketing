@@ -3,8 +3,23 @@
  * ----------------------------------------------------------------------------
  */
 
-section#hero {
+.page-header-block>img {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  position: absolute;
+  background-repeat: no-repeat;
+  opacity: 0.1;
+}
+
+section#hero,
+section#pageheader {
   padding-top: 90px;
+}
+section#pageheader {
+  position: relative;
 }
 
 .block-title {
@@ -125,6 +140,14 @@ section#hero {
       padding-left: 68px;
       padding-right: 0;
     }
+  }
+}
+
+/* Careers */
+.page-header-block {
+  .block-content {
+    text-align: center;
+    padding-top: 3.33333em;
   }
 }
 

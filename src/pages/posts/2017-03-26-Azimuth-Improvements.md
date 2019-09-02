@@ -1,5 +1,13 @@
 ---
 title: Release Notes - Azimuth Improvements and New Integrations
+sections:
+  - section_id: pageheader
+    component: PageHeaderBlock
+    type: pageheaderblock
+    # image: images/feature1.png
+    title: Release Notes - Azimuth Improvements and New Integrations
+    # content: >-
+    #   text...
 subtitle: >-
   Amet nibh adipiscing adipiscing. Commodo ante vis placerat interdum massa
   massa primis. 
