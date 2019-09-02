@@ -40,8 +40,9 @@ export default class Careers extends React.Component {
                           <p>{_.get(job, 'frontmatter.excerpt')}</p>
                         </div>
                         <footer className="post-meta">
-                          <time className="published"
-                            dateTime={moment(_.get(job, 'frontmatter.date')).strftime('%Y-%m-%d %H:%M')}>{moment(_.get(job, 'frontmatter.date')).strftime('%B %d, %Y')}</time>
+                            <div className="location">{_.get(job, 'frontmatter.location')}</div>
+                            {/*<time className="published"
+                            dateTime={moment(_.get(job, 'frontmatter.date')).strftime('%Y-%m-%d %H:%M')}>{moment(_.get(job, 'frontmatter.date')).strftime('%B %d, %Y')}</time>*/}
                         </footer>
                       </div>
                     </div>

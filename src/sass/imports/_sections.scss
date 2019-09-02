@@ -2,6 +2,18 @@
  * Sections
  * ----------------------------------------------------------------------------
  */
+
+.posts-bg {
+  top: 0;
+  bottom: 50px;
+  left: 0;
+  right: 0;
+  position: absolute;
+  background-image: url(/images/tel-aviv.png);
+  background-repeat: no-repeat;
+  opacity: 0.1;
+}
+
 section#hero,
 section#pageheader {
   padding-top: 90px;
