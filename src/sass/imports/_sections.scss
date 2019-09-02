@@ -3,13 +3,13 @@
  * ----------------------------------------------------------------------------
  */
 
-.posts-bg {
+.page-header-block>img {
   top: 0;
-  bottom: 50px;
   left: 0;
-  right: 0;
+  width: 100%;
+  height: 100%;
+
   position: absolute;
-  background-image: url(/images/tel-aviv.png);
   background-repeat: no-repeat;
   opacity: 0.1;
 }
@@ -17,6 +17,9 @@
 section#hero,
 section#pageheader {
   padding-top: 90px;
+}
+section#pageheader {
+  position: relative;
 }
 
 .block-title {

@@ -7,6 +7,7 @@ export default class PageHeaderBlock extends React.Component {
     render() {
         return (
             <section id={_.get(this.props, 'section.section_id')} className="block page-header-block bg-accent">
+             <img src={safePrefix(_.get(this.props, 'section.image'))} alt={_.get(this.props, 'section.image')}/>
               <div className="inner outer-hero">
                 <div className="grid">
                   <div className="cell block-content">

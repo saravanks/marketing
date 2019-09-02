@@ -5,7 +5,7 @@ sections:
   - section_id: pageheader
     component: PageHeaderBlock
     type: pageheaderblock
-    # image: images/feature1.png
+    image: images/tel-aviv.jpg
     title: UX/UI Lead
     # content: >-
     #   text...
