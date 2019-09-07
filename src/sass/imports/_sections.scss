@@ -23,13 +23,13 @@
 .page-header-block>img {
   top: 0;
   left: 0;
+  right: 0;
+  bottom: 0;
   width: 100%;
   height: 100%;
-
-  position: absolute;
-  background-repeat: no-repeat;
   opacity: 0.1;
-}
+  object-fit: cover;
+  position: absolute;}
 
 section#hero,
 section#pageheader {
