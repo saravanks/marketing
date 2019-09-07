@@ -4,6 +4,7 @@
  */
 
 .site-header {
+  z-index: 1;
   font-weight: 700;
   position: absolute;
   background: transparent;
@@ -206,6 +207,7 @@
   }
 
   .site-nav-inside {
+    color: _palette(primary);
     height: 100%;
     overflow: auto;
     -webkit-overflow-scrolling: touch;
