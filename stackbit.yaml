@@ -546,6 +546,10 @@ models:
         name: image
         label: Image
         description: The image of the section.
+      - type: tiltedImage
+        name: tiltedImage
+        label: Tilted Image
+        description: Determines if the image should be tilted.
       - type: list
         name: actions
         label: Action Buttons

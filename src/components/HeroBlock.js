@@ -1,7 +1,7 @@
 import React from 'react';
 import _ from 'lodash';
 
-import {safePrefix, markdownify, Link} from '../utils';
+import {safePrefix, markdownify, classNames } from '../utils';
 import JoinDialog from './JoinDialog';
 
 export default class HeroBlock extends React.Component {
@@ -11,7 +11,7 @@ export default class HeroBlock extends React.Component {
               <div className="inner outer-hero">
                 <div className="grid">
                   {_.get(this.props, 'section.image') && 
-                  <div className="cell block-preview">
+                  <div className={classNames('cell block-preview', { tilted: _.get(this.props, 'section.tiltedImage') })}>
                     <img src={safePrefix(_.get(this.props, 'section.image'))} alt={_.get(this.props, 'section.title')} />
                   </div>
                   }
