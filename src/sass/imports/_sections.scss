@@ -39,6 +39,14 @@ section#pageheader {
   position: relative;
 }
 
+section#call-to-action {
+  text-align: center;
+  .block-title {
+    font-size: 1.44444rem;
+    margin: 0 0 1.33333rem;
+  }
+}
+
 .block-title {
   font-size: 2.44444rem;
   margin: 0 0 1.33333rem;
