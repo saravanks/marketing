@@ -126,6 +126,11 @@ section#pageheader {
       -ms-flex: 8;
       flex: 8;
       padding-right: 68px;
+
+      &.tilted {
+        transform: scale(1.1) translateX(-20px) translateY(30px) perspective(1230px) rotateY(-30deg) rotateX(1deg) rotate(1deg);
+        z-index: 10;
+      }
     }
 
     .block-content {
