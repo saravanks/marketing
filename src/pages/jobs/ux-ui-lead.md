@@ -16,7 +16,7 @@ sections:
 #   sapien blandit ac amet faucibus aliquet placerat commodo.
 date: '2019-08-03'
 thumb_img_path: images/11_thumb.jpg
-template: post
+template: job
 ---
 
 ###About the Role
