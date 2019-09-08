@@ -19,15 +19,23 @@ sections:
     bg: gray
       
     featureslist:
-      - title: Git integration
-        image: images/git.png
+      - title: Design your system architecture
+        image: images/placeholder.png
         content: >-
-          Connect your Git account and start coding.
+          Use our visual designer to accelerate the process.
+          Import existing projects and get visibility instantly.
           
-      - title: Cloud support
-        image: images/cloud_providers.png
+      - title: Develop in your favorite environment
+        image: images/placeholder.png
         content: >-
-          Connect your cloud account and let the deployment flow.
+          Use your preferred language in your favorite IDE.
+          Start with dozens of templates for a quick start.
+          
+      - title: Deploy to any cloud
+        image: images/placeholder.png
+        content: >-
+          Connect your cloud account for continuous delivery.
+          Keep track with changes and deploy with confidence. 
       
   # - section_id: reviews
   #   component: ReviewsBlock

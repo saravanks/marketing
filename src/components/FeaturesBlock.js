@@ -21,11 +21,7 @@ export default class FeaturesBlock extends React.Component {
                 {_.map(_.get(this.props, 'section.featureslist'), (feature, feature_idx) => (
                 <div key={feature_idx} className="block-item">
                   <div className="grid">
-                    {_.get(feature, 'image') && 
-                    <div className="cell block-preview">
-                      <img src={safePrefix(_.get(feature, 'image'))} alt={_.get(feature, 'title')} />
-                    </div>
-                    }
+
                     <div className="cell block-content">
                       <h3 className="block-title underline">{_.get(feature, 'title')}</h3>
                       <div className="block-copy">
@@ -35,6 +31,11 @@ export default class FeaturesBlock extends React.Component {
                         <CtaButtons {...this.props} actions={_.get(feature, 'actions')} />
                       }
                     </div>
+                    {_.get(feature, 'image') &&
+                    <div className="cell block-preview">
+                        <img src={safePrefix(_.get(feature, 'image'))} alt={_.get(feature, 'title')} />
+                    </div>
+                    }
                   </div>
                 </div>
                 ))}
