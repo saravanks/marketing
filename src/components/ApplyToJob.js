@@ -52,7 +52,7 @@ export default function JoinDialog({ buttonText, job, buttonSize = '', buttonCol
   }
 
   return (
-    <div>
+    <div className="apply-to-job">
       <button className={`button ${buttonSize} ${buttonColor}`} onClick={handleClickOpen}>
       {buttonText}
       </button>
@@ -60,9 +60,6 @@ export default function JoinDialog({ buttonText, job, buttonSize = '', buttonCol
       <Dialog scroll="body" open={open} onClose={handleClose} aria-labelledby="form-dialog-title">
         <DialogTitle id="form-dialog-title">Join Us</DialogTitle>
         <DialogContent>
-          {/* <DialogContentText>
-            Join our awesome Beta!
-          </DialogContentText> */}
             <form autoComplete="on" ref={form} name="joinForm" action="#" id="join-form" className="join-form">
               <p className="screen-reader-text">
                 <label>Don't fill this out if you're human: <input id="join-insurance" name="insurance-field" onChange={e => setInsurance(e.target.value)} value={insurance} /></label>
