@@ -3,6 +3,12 @@
  * ----------------------------------------------------------------------------
  */
 
+.hero-block {
+  .grid{
+      padding-top: 4rem;
+      padding-bottom: 2rem;
+  }
+}
 .careers-title {
   padding-top: 3.33333rem;
   text-align: center;
@@ -48,7 +54,7 @@ section#call-to-action {
 }
 
 .block-title {
-  font-size: 2.44444rem;
+  font-size: 2.11111rem;
   margin: 0 0 1.33333rem;
 
   &:last-child {
@@ -135,16 +141,19 @@ section#call-to-action {
       flex: 8;
       padding-right: 68px;
 
+      img{
+        border-radius: 5px;
+      }
       &.tilted {
-        transform: scale(1.1) translateX(-20px) translateY(30px) perspective(1230px) rotateY(-30deg) rotateX(1deg) rotate(1deg);
+        //transform: scale(1.1) translateX(-20px) translateY(30px) perspective(1230px) rotateY(-30deg) rotateX(1deg) rotate(1deg);
         z-index: 10;
       }
     }
 
     .block-content {
-      -webkit-flex: 8;
-      -ms-flex: 8;
-      flex: 8;
+      -webkit-flex: 7;
+      -ms-flex: 7;
+      flex: 7;
     }
     
     .underline:after {
@@ -161,14 +170,27 @@ section#call-to-action {
   .text-block,
   .block-item:nth-child(2n+1) {
     .grid {
-      -webkit-flex-direction: row-reverse;
+      padding-top: 4rem;
+      padding-bottom: 2rem;
+      /*-webkit-flex-direction: row-reverse;
       -ms-flex-direction: row-reverse;
-      flex-direction: row-reverse;
+      flex-direction: row-reverse;*/
     }
 
     .block-preview {
       padding-left: 68px;
       padding-right: 0;
+    }
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .hero-block {
+    .grid {
+      padding: 3.33333rem 4vw 3.33333rem;
+    }
+    .block-preview {
+      padding-top: 3.33333rem;
     }
   }
 }

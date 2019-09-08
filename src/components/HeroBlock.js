@@ -10,11 +10,6 @@ export default class HeroBlock extends React.Component {
             <section id={_.get(this.props, 'section.section_id')} className="block hero-block bg-accent">
               <div className="inner outer-hero">
                 <div className="grid">
-                  {_.get(this.props, 'section.image') && 
-                  <div className={classNames('cell block-preview', { tilted: _.get(this.props, 'section.tiltedImage') })}>
-                    <img src={safePrefix(_.get(this.props, 'section.image'))} alt={_.get(this.props, 'section.title')} />
-                  </div>
-                  }
                   <div className="cell block-content">
                     <h2 className="block-title underline">{_.get(this.props, 'section.title')}</h2>
                     <div className="block-copy">
@@ -30,6 +25,11 @@ export default class HeroBlock extends React.Component {
                     // </p>
                     }
                   </div>
+                    {_.get(this.props, 'section.image') &&
+                    <div className={classNames('cell block-preview', { tilted: _.get(this.props, 'section.tiltedImage') })}>
+                        <img src={safePrefix(_.get(this.props, 'section.image'))} alt={_.get(this.props, 'section.title')} />
+                    </div>
+                    }
                 </div>
               </div>
                 <div className="wave" style={{position:'relative', bottom:'-10px'}} aria-hidden="true">
