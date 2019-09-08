@@ -1,6 +1,6 @@
 ---
 title: 5 Customer Service Skills that Every Employee Needs
-# sections:
+sections:
   - section_id: pageheader
     component: PageHeaderBlock
     type: pageheaderblock

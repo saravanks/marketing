@@ -1,6 +1,6 @@
 ---
 title: Release Notes - Azimuth Improvements and New Integrations
-# sections:
+sections:
   - section_id: pageheader
     component: PageHeaderBlock
     type: pageheaderblock

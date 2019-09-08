@@ -1,6 +1,6 @@
 ---
 title: Behind the Scenes - The Design of Azimuth
-# sections:
+sections:
   - section_id: pageheader
     component: PageHeaderBlock
     type: pageheaderblock
