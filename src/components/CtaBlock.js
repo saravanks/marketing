@@ -1,7 +1,7 @@
 import React from 'react';
 import _ from 'lodash';
 
-import {htmlToReact, Link, safePrefix} from '../utils';
+import {htmlToReact } from '../utils';
 import JoinDialog from '../components/JoinDialog';
 
 export default class CtaBlock extends React.Component {

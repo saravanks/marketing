@@ -2,7 +2,6 @@ import React from 'react';
 import Dialog from '@material-ui/core/Dialog';
 import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
-import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import Recaptcha from 'react-recaptcha';
 
@@ -146,52 +145,3 @@ export default function JoinDialog({ buttonText, buttonSize = '', buttonColor=''
     </div>
   );
 }
-
-// import React from 'react';
-// import Button from '@material-ui/core/Button';
-// import TextField from '@material-ui/core/TextField';
-// import Dialog from '@material-ui/core/Dialog';
-// import DialogActions from '@material-ui/core/DialogActions';
-// import DialogContent from '@material-ui/core/DialogContent';
-// import DialogContentText from '@material-ui/core/DialogContentText';
-// import DialogTitle from '@material-ui/core/DialogTitle';
-
-// export default function FormDialog({ title, children, open, onSubmit, onCancel }) {
-//   function handleCancel() {
-//     onCancel()
-//   }
-
-//   function handleSubmit() {
-//     onSubmit()
-//   }
-
-//   return (
-//     <div>
-//       <button className="button" onClick={() => this.setState({ dialogOpen: true})}>JOIN</button>
-//       <Dialog open={open} onClose={handleCancel} aria-labelledby="form-dialog-title">
-//         <DialogTitle id="form-dialog-title">Subscribe</DialogTitle>
-//         <DialogContent>
-//           <DialogContentText>
-//             {title}
-//           </DialogContentText>
-//           <TextField
-//             autoFocus
-//             margin="dense"
-//             id="name"
-//             label="Email Address"
-//             type="email"
-//             fullWidth
-//           />
-//         </DialogContent>
-//         <DialogActions>
-//           <Button onClick={handleCancel} color="primary">
-//             Cancel
-//           </Button>
-//           <Button onClick={handleSubmit} color="primary">
-//             Submit
-//           </Button>
-//         </DialogActions>
-//       </Dialog>
-//     </div>
-//   );
-// }
