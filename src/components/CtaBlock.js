@@ -24,7 +24,7 @@ export default class CtaBlock extends React.Component {
                     {/* {_.map(_.get(this.props, 'section.actions'), (action, action_idx) => (
                     <Link key={action_idx} to={safePrefix(_.get(action, 'url'))} className="button">{_.get(action, 'label')}</Link>
                 ))} */}
-                <JoinDialog buttonText="Create your first project" />
+                <JoinDialog buttonText="JOIN BETA" />
                 </div>
                 }
               </div>
