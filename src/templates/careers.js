@@ -1,6 +1,6 @@
 import React from 'react';
 import _ from 'lodash';
-import moment from 'moment-strftime';
+// import moment from 'moment-strftime';
 
 import components, {Layout} from '../components/index';
 import {getPages, Link, safePrefix} from '../utils';

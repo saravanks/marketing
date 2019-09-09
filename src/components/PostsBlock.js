@@ -36,7 +36,7 @@ export default class PostsBlock extends React.Component {
                         </div>
                         <footer className="post-meta">
                           <time className="published"
-                            datetime={moment(_.get(post, 'frontmatter.date')).strftime('%Y-%m-%d %H:%M')}>{moment(_.get(post, 'frontmatter.date')).strftime('%B %d, %Y')}</time>
+                            dateTime={moment(_.get(post, 'frontmatter.date')).strftime('%Y-%m-%d %H:%M')}>{moment(_.get(post, 'frontmatter.date')).strftime('%B %d, %Y')}</time>
                         </footer>
                       </div>
                     </div>
