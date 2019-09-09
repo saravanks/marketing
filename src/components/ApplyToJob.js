@@ -88,7 +88,7 @@ export default function JoinDialog({ buttonText, job, buttonSize = '', buttonCol
             </form>
         </DialogContent>
         <DialogActions>
-          <button className="button" onClick={handleSubmit}>APPLY</button>
+          <button className="button" onClick={handleSubmit}>Apply</button>
         </DialogActions>
       </Dialog>
     </div>

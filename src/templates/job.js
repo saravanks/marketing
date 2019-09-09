@@ -44,7 +44,7 @@ export default class Job extends React.Component {
                   </footer>
                 </article>
               
-                <ApplyToJob buttonText="APPLY" buttonSize="large" job={_.get(this.props, 'pageContext.frontmatter.title')} />
+                <ApplyToJob buttonText="Apply" buttonSize="large" job={_.get(this.props, 'pageContext.frontmatter.title')} />
               </div>
               
             </div>
