@@ -72,7 +72,7 @@ sections:
   - section_id: call-to-action
     component: CtaBlock
     type: ctablock
-    title: Get Early Access
+    title: Get Early Access to Altostra
     actions:
       - label: JOIN BETA
         url: /join
