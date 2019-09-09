@@ -19,23 +19,29 @@ sections:
     bg: gray
       
     featureslist:
-      - title: Design your system architecture
-        image: images/placeholder.png
+      - pre_title: Design
+        title:  your system architecture
+        image: images/design.png
         content: >-
           Use our visual designer to accelerate the process.
           Import existing projects and get visibility instantly.
           
-      - title: Develop in your favorite environment
-        image: images/placeholder.png
+      - pre_title: Develop 
+        title:  in your favorite environment
+        color: '#b5267b'
+        image: images/develop.png
         content: >-
           Use your preferred language in your favorite IDE.
-          Start with dozens of templates for a quick start.
-          
-      - title: Deploy to any cloud
-        image: images/placeholder.png
+          Choose from dozens of templates for a quick start.
+                 
+      - pre_title: Deploy 
+        title:  to any cloud
+        color: '#87268A'
+        image: images/deploy.png
         content: >-
-          Connect your cloud account for continuous delivery.
-          Keep track with changes and deploy with confidence. 
+          Connect your cloud provider for continuous delivery.
+          Keep track of changes and deploy with confidence.
+                 
       
   # - section_id: reviews
   #   component: ReviewsBlock
@@ -66,9 +72,9 @@ sections:
   - section_id: call-to-action
     component: CtaBlock
     type: ctablock
-    title: Your Next Project is Mintues Away
+    title: Get Early Access
     actions:
-      - label: Create your first project
+      - label: JOIN BETA
         url: /join
   # - section_id: recent-posts
   #   component: PostsBlock

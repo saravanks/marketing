@@ -21,9 +21,8 @@ export default class FeaturesBlock extends React.Component {
                 {_.map(_.get(this.props, 'section.featureslist'), (feature, feature_idx) => (
                 <div key={feature_idx} className="block-item">
                   <div className="grid">
-
                     <div className="cell block-content">
-                      <h3 className="block-title underline">{_.get(feature, 'title')}</h3>
+                      <h3 className="block-title underline"><span className="highlight-title" style={{color: _.get(feature, 'color')}}>{_.get(feature, 'pre_title')} </span><span>{_.get(feature, 'title')}</span></h3>
                       <div className="block-copy">
                         {markdownify(_.get(feature, 'content'))}
                       </div>

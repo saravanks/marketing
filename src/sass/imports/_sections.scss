@@ -3,6 +3,10 @@
  * ----------------------------------------------------------------------------
  */
 
+.highlight-title{
+  color: _palette(accent-orange);
+}
+
 .hero-block {
   .grid{
       padding-top: 4rem;
@@ -165,6 +169,15 @@ section#call-to-action {
       margin-right: 15px;
     }
   }
+
+  .block-item:nth-child(2n) {
+    .grid {
+      -webkit-flex-direction: row-reverse;
+      -ms-flex-direction: row-reverse;
+      flex-direction: row-reverse;
+    }
+  }
+
 
   .hero-block,
   .text-block,
