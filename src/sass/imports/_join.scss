@@ -1,16 +1,3 @@
-// Setting explicity height on this so that the dialog won't scroll.
-.recaptcha {
-  border: 1px solid transparent;
-  
-  &.fix-height {
-    height: 146px;
-  }
-
-  &.required {
-    border: 1px solid red;
-  }
-}
-
 .apply-to-job {
   display: flex;
   justify-content: center;
