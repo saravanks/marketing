@@ -76,6 +76,7 @@ export default class JoinDialog extends React.Component {
                   <input
                     className="form-input"
                     name="linkedinurl"
+                    placeholder="https://www.linkedin.com/in/yourname"
                     type="url"
                     autoComplete="url"
                     required

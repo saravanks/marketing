@@ -80,11 +80,12 @@ export default class JoinDialog extends React.Component {
               </p>
               
               <p className="form-row">
-                <label className="form-label">Name</label>
+                <label className="form-label">Full Name</label>
                 <input
                   className="form-input"
                   name="name"
                   type="text"
+                  placeholder="Full Name"
                   required
                   autoComplete="name"
                   autoFocus
@@ -99,6 +100,7 @@ export default class JoinDialog extends React.Component {
                   className="form-input"
                   name="job"
                   type="text"
+                  placeholder="Job Title"
                   required
                   autoComplete="organization-title"
                   onChange={e => this.setState({ jobTitle: e.target.value })}
@@ -112,6 +114,7 @@ export default class JoinDialog extends React.Component {
                   className="form-input"
                   name="company"
                   type="text"
+                  placeholder="Company"
                   required
                   autoComplete="organization"
                   onChange={e => this.setState({ company: e.target.value })}
@@ -125,6 +128,7 @@ export default class JoinDialog extends React.Component {
                   className="form-input"
                   name="email"
                   type="email"
+                  placeholder="Email address"
                   required
                   autoComplete="email"
                   onChange={e => this.setState({ email: e.target.value })}
