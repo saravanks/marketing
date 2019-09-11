@@ -3,8 +3,6 @@
  *
  * See: https://www.gatsbyjs.org/docs/browser-apis/
  */
-const analytics = require('./src/analytics')
-
 exports.onInitialClientRender = () => {
     if ('onGatsbyInitialClientRender' in window && typeof window.onGatsbyInitialClientRender === 'function') {
         window.onGatsbyInitialClientRender();
@@ -14,6 +12,8 @@ exports.onInitialClientRender = () => {
 exports.onRouteUpdate = () => {
     if ('onGatsbyRouteUpdate' in window && typeof window.onGatsbyRouteUpdate === 'function') {
         window.onGatsbyRouteUpdate();
-        analytics.send(analytics.EVENTS.PAGE_VIEW);
+        const analytics = require('./src/analytics');
+        const EVENTS = require('./src/analytics/events').default;
+        analytics.send(EVENTS.PAGE_VIEW);
     }
 };

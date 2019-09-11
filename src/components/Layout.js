@@ -6,9 +6,13 @@ import {safePrefix} from '../utils';
 import Header from './Header';
 import Footer from './Footer';
 import SEO from '../components/SEO';
-import '../analytics';
+
 
 export default class Body extends React.Component {
+    componentDidMount() {
+        require('../analytics');
+    }
+
     render() {
         const title = `${_.get(this.props, 'pageContext.frontmatter.title') && _.get(this.props, 'pageContext.frontmatter.title') + ' | '}${_.get(this.props, 'pageContext.site.siteMetadata.title')}`
         return (

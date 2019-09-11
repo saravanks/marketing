@@ -4,7 +4,7 @@ import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import Recaptcha from 'react-recaptcha';
-import * as analytics from '../analytics';
+import EVENTS from '../analytics/events';
 
 export default class JoinDialog extends React.Component {
   constructor(props) {
@@ -21,22 +21,33 @@ export default class JoinDialog extends React.Component {
 
     this.form = React.createRef();
     this.recaptchaEl = React.createRef();
+    this.analytics = null
+  }
+
+  componentDidMount() {
+    this.analytics = require('../analytics')
+  }
+
+  sendAnalytics(...args) {
+    if (this.analytics) {
+      this.analytics.send(...args)
+    }
   }
 
   handleClickOpen() {
-    analytics.send(analytics.EVENTS.JOIN_BETA.OPEN);
+    this.sendAnalytics(EVENTS.JOIN_BETA.OPEN);
     this.setState({ open: true });
   }
 
   handleSubmit() {
-    analytics.send(analytics.EVENTS.JOIN_BETA.SUBMIT);
+    this.sendAnalytics(EVENTS.JOIN_BETA.SUBMIT);
     if (this.form.current.reportValidity()) {
       this.recaptchaEl.current.execute();
     }
   }
 
   handleClose() {
-    analytics.send(analytics.EVENTS.JOIN_BETA.CLOSE);
+    this.sendAnalytics(EVENTS.JOIN_BETA.CLOSE);
     this.setState({
       open: false,
       name: '',
@@ -47,7 +58,7 @@ export default class JoinDialog extends React.Component {
   }
 
   handleRecaptchaVerify(captcha) {
-    analytics.send(analytics.EVENTS.JOIN_BETA.SEND);
+    this.sendAnalytics(EVENTS.JOIN_BETA.SEND);
     fetch('https://at8732o4l6.execute-api.us-east-1.amazonaws.com/Prod/signup', {
       method: 'POST',
       mode: 'cors',
