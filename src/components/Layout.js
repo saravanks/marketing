@@ -6,6 +6,7 @@ import {safePrefix} from '../utils';
 import Header from './Header';
 import Footer from './Footer';
 import SEO from '../components/SEO';
+import '../analytics';
 
 export default class Body extends React.Component {
     render() {

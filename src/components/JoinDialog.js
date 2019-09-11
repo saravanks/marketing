@@ -4,6 +4,7 @@ import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import Recaptcha from 'react-recaptcha';
+import * as analytics from '../analytics';
 
 export default class JoinDialog extends React.Component {
   constructor(props) {
@@ -23,16 +24,19 @@ export default class JoinDialog extends React.Component {
   }
 
   handleClickOpen() {
+    analytics.send(analytics.EVENTS.JOIN_BETA.OPEN);
     this.setState({ open: true });
   }
 
   handleSubmit() {
+    analytics.send(analytics.EVENTS.JOIN_BETA.SUBMIT);
     if (this.form.current.reportValidity()) {
       this.recaptchaEl.current.execute();
     }
   }
 
   handleClose() {
+    analytics.send(analytics.EVENTS.JOIN_BETA.CLOSE);
     this.setState({
       open: false,
       name: '',
@@ -43,6 +47,7 @@ export default class JoinDialog extends React.Component {
   }
 
   handleRecaptchaVerify(captcha) {
+    analytics.send(analytics.EVENTS.JOIN_BETA.SEND);
     fetch('https://at8732o4l6.execute-api.us-east-1.amazonaws.com/Prod/signup', {
       method: 'POST',
       mode: 'cors',
