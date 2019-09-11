@@ -3,13 +3,28 @@
  * ----------------------------------------------------------------------------
  */
 
-#call-to-action{
+#call-to-action.cta-block{
+  text-align: center;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 1rem;
+  .block-title {
+    font-size: 1.33333rem;
+    margin: 0 0 1.33333rem;
+  }
   .block-buttons{
     padding-left: 0;
   }
-  .cta-block {
-    padding-left: 0;
-    padding-right: 0;
+}
+
+.features-block {
+  &:after{
+    background-image: linear-gradient(-90deg,rgba(255,255,255,0) 0,#000 5%,#000 90%,rgba(255,255,255,0) 100%);
+    content: "";
+    display: block;
+    height: .09rem;
+    opacity: .05;
+    width: 100%;
   }
 }
 
@@ -19,7 +34,8 @@
     background-image: url(/images/wave-bg.png);
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    background-position: 50% 50%; }
+    background-position: 50% 50%;
+  }
 
   .block-copy p{
     max-width: 90%;
@@ -70,14 +86,6 @@ section#pageheader {
 }
 section#pageheader {
   position: relative;
-}
-
-section#call-to-action {
-  text-align: center;
-  .block-title {
-    font-size: 1.33333rem;
-    margin: 0 0 1.33333rem;
-  }
 }
 
 .block-title {
