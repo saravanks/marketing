@@ -2,7 +2,6 @@ import amplitude from 'amplitude-js';
 import EVENTS from './events';
 
 amplitude.getInstance().init('e4e8eac7b327f32d54b6e1c3ad6aa180');
-const window = window || {}
 
 export const send = (event) => {
   switch (event) {
