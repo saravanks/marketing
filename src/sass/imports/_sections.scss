@@ -15,22 +15,16 @@
 
 @media only screen and (min-width: 801px) {
   .features-block {
-    .wave-bg {
-    background: url(/images/wave-bg.png) no-repeat center center;
-    background-size: cover;
-    width: 100%;
-    height: 100%;
-    display: block;
-    position: absolute;
-    opacity: 0.5;
-    left: 0;
-    z-index: -1;
-    padding-bottom: 50%;
-    padding-top: 40%;}
-    .block-copy p{
-      max-width: 90%;
-    }
-}}
+    padding-top: 0;
+    background-image: url(/images/wave-bg.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: 50% 50%; }
+
+  .block-copy p{
+    max-width: 90%;
+  }
+}
 
 .highlight-title{
   color: _palette(accent-orange);

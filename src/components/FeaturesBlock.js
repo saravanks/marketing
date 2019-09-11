@@ -8,7 +8,6 @@ export default class FeaturesBlock extends React.Component {
     render() {
         return (
             <section id={_.get(this.props, 'section.section_id')} className={'block features-block bg-' + _.get(this.props, 'section.bg') + ' outer'}>
-              <div className="wave-bg"></div>
               <div className="block-header inner-small">
                 <h2 className="block-title">{_.get(this.props, 'section.title')}</h2>
                 {_.get(this.props, 'section.subtitle') && 
