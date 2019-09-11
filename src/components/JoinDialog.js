@@ -54,7 +54,7 @@ export default class JoinDialog extends React.Component {
       email: '',
       jobTitle: '',
       company: ''
-    })
+    });
   }
 
   handleRecaptchaVerify(captcha) {
@@ -80,6 +80,31 @@ export default class JoinDialog extends React.Component {
     this.handleClose()
   }
 
+  /**
+   * Super hack to fix the masthead moving right when dialog opens
+   * 
+   * When the dialog opens it adds 17px of right padding to the body element and sets the overflow of
+   * the body to hidden. This prevents the dialog from scrolling and pushes the body to the left to prevent
+   * a "jump" of the whole content because the scrollbar disappreas. But, this does't apply on the #masthead
+   * element since it's absolute. To overcome this, we hackily add a style to the #masthead element that pushes
+   * it to the left when the dialog is entering and removes the style when it's exited. These specific events,
+   * onEntering and onExited, are required for the hack to work properly and prevents the #masthead element
+   * from jittering back and forth.
+   * Only apply the hack when width > 800 as it's defined in the CSS. 800 and below collapses the header and
+   * breaks the view if the hack is applied.
+   */
+  handleDialogEntering() {
+    if (window.innerWidth > 800) {
+      document.querySelector('#masthead').style.marginRight = "17px";
+    }
+  }
+  handleDialogExited() {
+    if (window.innerWidth > 800) {
+      document.querySelector('#masthead').style.marginRight = "";
+    }
+  }
+  // End of super hack
+
   render() {
     return (
       <div>
@@ -87,7 +112,7 @@ export default class JoinDialog extends React.Component {
         {this.props.buttonText}
         </button>
   
-        <Dialog scroll="body" open={this.state.open} onClose={this.handleClose.bind(this)} aria-labelledby="form-dialog-title">
+        <Dialog open={this.state.open} onClose={this.handleClose.bind(this)} onEntering={this.handleDialogEntering.bind(this)} onExited={this.handleDialogExited.bind(this)} aria-labelledby="form-dialog-title">
           <DialogTitle id="form-dialog-title">Join</DialogTitle>
           <DialogContent>
             <form autoComplete="on" ref={this.form} name="joinForm" action="#" id="join-form" className="join-form">
