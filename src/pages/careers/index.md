@@ -1,5 +1,8 @@
 ---
 title: Careers
+description: >-
+  Join us to help developers make better software faster
+image: images/S-2.png
 subtitle: >-
   Join us to help developers make better software faster
 sections:

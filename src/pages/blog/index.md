@@ -1,5 +1,6 @@
 ---
 title: Blog
+image: images/S-3.png
 sections:
   - section_id: pageheader
     component: PageHeaderBlock

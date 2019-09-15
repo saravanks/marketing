@@ -1,5 +1,7 @@
 ---
 title: ''
+description: Combined with all your favorite tools
+image: images/S-1.png
 sections:
   - section_id: hero
     component: HeroBlock
