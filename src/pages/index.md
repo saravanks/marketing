@@ -1,5 +1,5 @@
 ---
-title: ''
+title: Altostra
 description: Combined with all your favorite tools
 image: images/S-1.png
 sections:
