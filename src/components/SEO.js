@@ -8,7 +8,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import Helmet from "react-helmet"
-import { useStaticQuery, graphql, safePrefix } from "gatsby"
+import { useStaticQuery, graphql, safePrefix, toUrl } from "gatsby"
 
 function SEO({ description, lang, meta, title, image }) {
   const { site } = useStaticQuery(
@@ -27,7 +27,7 @@ function SEO({ description, lang, meta, title, image }) {
   )
 
   const metaDescription = description || site.siteMetadata.description
-  const metaImage = safePrefix(image || site.siteMetadata.image)
+  const metaImage = safePrefix(toUrl(image)) || site.siteMetadata.image
 
   return (
     <Helmet
