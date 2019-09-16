@@ -30,8 +30,8 @@ function SEO({ description, lang, meta, title, image }) {
 
   const metaDescription = description || site.siteMetadata.description
   // const location = window && window.location
-  const location = useSiteHref()
-  const metaImage = (location && location.href + image) || site.siteMetadata.image
+  const siteHref = useSiteHref()
+  const metaImage = (siteHref && `${siteHref}/${image}`) || site.siteMetadata.image
 
   return (
     <Helmet
