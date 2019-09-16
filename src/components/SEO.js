@@ -9,7 +9,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
-import useWindowLocation from '../react-hooks/useWindowLocation'
+import useSiteHref from '../react-hooks/useSiteHref'
 
 function SEO({ description, lang, meta, title, image }) {
   const { site } = useStaticQuery(
@@ -30,7 +30,7 @@ function SEO({ description, lang, meta, title, image }) {
 
   const metaDescription = description || site.siteMetadata.description
   // const location = window && window.location
-  const location = useWindowLocation()
+  const location = useSiteHref()
   const metaImage = (location && location.href + image) || site.siteMetadata.image
 
   return (
