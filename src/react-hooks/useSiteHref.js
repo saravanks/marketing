@@ -19,9 +19,13 @@ export default function useSiteHref() {
   const [location, setLocation] = React.useState(getHref)
 
   React.useEffect(() => {
-    if (!isClient) { return false }
-
-    setLocation(window.location)
+    if (isClient) {
+      setLocation(window.location)  
+    } else if (isServer) {
+      setLocation(getHrefByEnv())
+    } else {
+      return false
+    }
   }, [])
 
   return location
