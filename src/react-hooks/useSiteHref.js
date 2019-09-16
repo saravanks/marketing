@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function useSiteHref() {
   const isClient = typeof window === 'object'
-  const isServer = typeof process === 'object' && typeof process.env === 'object'
+  const isServer = typeof process === 'object' //&& typeof process.env === 'object'
   
   function getHref() {
     return (
@@ -16,17 +16,14 @@ export default function useSiteHref() {
     return process.env.PULL_REQUEST ? process.env.DEPLOY_URL : process.env.URL
   }
 
-  const [location, setLocation] = React.useState(getHref)
+  const [href, setHref] = React.useState(getHref)
 
   React.useEffect(() => {
-    if (isClient) {
-      setLocation(window.location)  
-    } else if (isServer) {
-      setLocation(getHrefByEnv())
-    } else {
-      return false
-    }
+    const newHref = getHref()
+    if (!newHref) { return false }
+
+    setHref(newHref)
   }, [])
 
-  return location
+  return href
 }
