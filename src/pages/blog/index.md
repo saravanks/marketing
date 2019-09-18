@@ -1,6 +1,8 @@
 ---
 title: Blog
 image: images/S-3.png
+imageWidth: '810'
+imageHeight: '450'
 sections:
   - section_id: pageheader
     component: PageHeaderBlock

@@ -3,6 +3,8 @@ title: Careers
 description: >-
   Be part of the team, join us to help developers make better software faster
 image: images/S-2.png
+imageWidth: '810'
+imageHeight: '450'
 subtitle: >-
   Join us to help developers make better software faster
 sections:

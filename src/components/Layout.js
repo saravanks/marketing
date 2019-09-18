@@ -20,6 +20,8 @@ export default class Body extends React.Component {
                 <SEO 
                     title={title}
                     image={_.get(this.props, 'pageContext.frontmatter.image')}
+                    imageWidth={_.get(this.props, 'pageContext.frontmatter.imageWidth')}
+                    imageHeight={_.get(this.props, 'pageContext.frontmatter.imageHeigh')}
                     description={_.get(this.props, 'pageContext.frontmatter.description')}
                 />
                 <Helmet>
