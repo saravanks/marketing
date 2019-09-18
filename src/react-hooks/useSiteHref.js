@@ -20,13 +20,14 @@ export default function useSiteHref() {
 
   React.useEffect(() => {
     const newHref = getHref()
-    console.log('debug', newHref)
-    console.log('debug', process.env)
+    console.log('newHref', newHref)
+    console.log('process', process)
+    console.log('process.env', process.env)
     if (!newHref) { return false }
 
     setHref(newHref)
   }, [])
 
-  console.log('debug', href)
+  console.log('href', href)
   return href
 }

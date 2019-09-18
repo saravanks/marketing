@@ -9,7 +9,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
-import useSiteHref from '../react-hooks/useSiteHref'
+// import useSiteHref from '../react-hooks/useSiteHref'
 
 function SEO({ description, lang, meta, title, image }) {
   const { site } = useStaticQuery(
@@ -21,7 +21,10 @@ function SEO({ description, lang, meta, title, image }) {
             description
             author
             twitter,
-            image
+            image,
+            buildMetadata {
+              deployUrl
+            }
           }
         }
       }
@@ -30,8 +33,9 @@ function SEO({ description, lang, meta, title, image }) {
 
   const metaDescription = description || site.siteMetadata.description
   // const location = window && window.location
-  const siteHref = useSiteHref()
-  const metaImage = (siteHref && `${siteHref}${image}`) || site.siteMetadata.image
+  // const siteHref = useSiteHref()
+  // const metaImage = (siteHref && `${siteHref}${image}`) || site.siteMetadata.image
+  const metaImage = `${site.siteMetadata.buildMetadata.deployUrl}/${image}`
 
   return (
     <Helmet
