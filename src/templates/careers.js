@@ -7,7 +7,7 @@ import {getPages, Link, safePrefix} from '../utils';
 
 export default class Careers extends React.Component {
     render() {
-        let display_jobs = _.orderBy(getPages(this.props.pageContext.pages, '/career'), 'frontmatter.date', 'desc');
+        let display_jobs = _.orderBy(getPages(this.props.pageContext.pages, '/jobs'), 'frontmatter.date', 'desc');
         return (
             <Layout {...this.props}>
 

@@ -62,7 +62,7 @@ As the UI lead, you will design the branding for the company, work on marketing 
 - Experience designing UX for command-line tools
 
 ###Contact Us
-If you’re interested, or you know someone who might be, you can reach us at [careers@altostra.com](mailto:careers@altostra.com)
+If you’re interested, or you know someone who might be, you can reach us at [jobs@altostra.com](mailto:jobs@altostra.com)
 
 ---
 
