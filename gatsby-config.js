@@ -4,7 +4,8 @@ module.exports = {
     siteMetadata: Object.assign(
         require('./site-metadata.json'), {
             buildMetadata: {
-                url: (process.env.PULL_REQUEST ? process.env.DEPLOY_URL : process.env.URL) || ''
+                url: (process.env.PULL_REQUEST ? process.env.URL : process.env.DEPLOY_URL) || ''
+                // url: (process.env.PULL_REQUEST ? process.env.DEPLOY_URL : process.env.URL) || ''
             }
         }
     ),
