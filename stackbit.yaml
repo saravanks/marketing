@@ -337,7 +337,7 @@ models:
     template: page
     exclude: 
       - posts/**
-      - jobs/**
+      - career/**
     fields:
       - type: string
         name: title
@@ -395,7 +395,7 @@ models:
     type: page
     label: Job
     template: job
-    folder: jobs
+    folder: career
     fields:
       - type: string
         name: title
@@ -424,7 +424,7 @@ models:
         description: The excerpt of the job displayed in the careers feed.
       - type: page_menus
         name: menus
-        label: Jobs Menus
+        label: Careers Menus
         description: Which menus should this page show up in
   section:
     type: object

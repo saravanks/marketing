@@ -56,7 +56,7 @@ As a Senior Cloud Engineer, you will join our core engineering team to help buil
 - Experience with Terraform
 
 ###Contact Us
-If you’re interested, or you know someone who might be, you can reach us at [jobs@altostra.com](mailto:jobs@altostra.com)
+If you’re interested, or you know someone who might be, you can reach us at [careers@altostra.com](mailto:careers@altostra.com)
 
 ---
 
