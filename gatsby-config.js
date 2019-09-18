@@ -1,6 +1,13 @@
 module.exports = {
     pathPrefix: '/',
-    siteMetadata: require('./site-metadata.json'),
+    // siteMetadata: require('./site-metadata.json'),
+    siteMetadata: Object.assign(
+        require('./site-metadata.json'), {
+            buildMetadata: {
+                url: (process.env.PULL_REQUEST ? process.env.DEPLOY_URL : process.env.URL) || ''
+            }
+        }
+    ),
     plugins: [
         {
             resolve: `gatsby-plugin-recaptcha`,

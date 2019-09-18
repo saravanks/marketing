@@ -17,7 +17,13 @@ export default class Body extends React.Component {
         const title = `${_.get(this.props, 'pageContext.frontmatter.title') && _.get(this.props, 'pageContext.frontmatter.title') + ' | '}${_.get(this.props, 'pageContext.site.siteMetadata.title')}`
         return (
             <React.Fragment>
-                <SEO title={title}/>
+                <SEO 
+                    title={title}
+                    image={_.get(this.props, 'pageContext.frontmatter.image')}
+                    imageWidth={_.get(this.props, 'pageContext.frontmatter.imageWidth')}
+                    imageHeight={_.get(this.props, 'pageContext.frontmatter.imageHeight')}
+                    description={_.get(this.props, 'pageContext.frontmatter.description')}
+                />
                 <Helmet>
                     <title>{title}</title>
                     <meta charset="utf-8"/>

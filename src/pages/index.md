@@ -1,5 +1,9 @@
 ---
-title: ''
+title: Altostra
+description: Build modern applications in minutes, combined with all your favorite tools
+image: images/S-1.png
+imageWidth: '810'
+imageHeight: '450'
 sections:
   - section_id: hero
     component: HeroBlock

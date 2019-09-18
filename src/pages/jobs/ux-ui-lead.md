@@ -1,6 +1,12 @@
 ---
 title: UX/UI Lead
 location: Tel Aviv, Israel | Engineering
+description: >-
+  As the UX lead, you will be responsible for designing the best user experience for our customers, setting design guidelines, rules and standards to be followed by the rest of the team to provide a consistent and smooth working experience. You will also be responsible for making sure the final product is up to the spec and standards you set.
+  As the UI lead, you will design the branding for the company, work on marketing and PR materials and websites, design and create websites and application components. You will be the creative authority in the team.
+image: images/11_thumb.jpg
+imageWidth: '810'
+imageHeight: '450'
 sections:
   - section_id: pageheader
     component: PageHeaderBlock

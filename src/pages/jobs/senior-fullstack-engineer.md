@@ -1,6 +1,11 @@
 ---
 title: Senior Full Stack Engineer
 location: Tel Aviv, Israel | Engineering
+description: >-
+  As a Senior Full Stack Engineer, you will join our core engineering team to help build our product while ensuring high availability and quality experience for our customers. You will have full ownership of frontend and backend systems, their design, delivery, operation and support. You will work closely with the CTO and will leverage your experience to innovate and help shape the future of the product.
+image: images/bnw_thumb.jpg
+imageWidth: '810'
+imageHeight: '450'
 sections:
   - section_id: pageheader
     component: PageHeaderBlock

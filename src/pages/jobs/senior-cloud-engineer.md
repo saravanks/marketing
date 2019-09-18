@@ -1,5 +1,10 @@
 ---
 title: Senior Cloud Engineer
+description: >-
+  As a Senior Cloud Engineer, you will join our core engineering team to help build the infrastructure for our product, research cloud technologies to improve our product and be the technical focal point for the team on all cloud infrastructure matters. You will create prototypes and develop new product features. You will be the cloud expert of the team, work closely with the CTO and innovate to provide more value to our customers.
+image: images/dev_thumb.jpg
+imageWidth: '810'
+imageHeight: '450'
 location: Tel Aviv, Israel | Engineering
 sections:
   - section_id: pageheader
