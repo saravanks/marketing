@@ -21,7 +21,7 @@ export default class Body extends React.Component {
                     title={title}
                     image={_.get(this.props, 'pageContext.frontmatter.image')}
                     imageWidth={_.get(this.props, 'pageContext.frontmatter.imageWidth')}
-                    imageHeight={_.get(this.props, 'pageContext.frontmatter.imageHeigh')}
+                    imageHeight={_.get(this.props, 'pageContext.frontmatter.imageHeight')}
                     description={_.get(this.props, 'pageContext.frontmatter.description')}
                 />
                 <Helmet>
