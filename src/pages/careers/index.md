@@ -1,7 +1,7 @@
 ---
 title: Careers
 description: >-
-  Join us to help developers make better software faster
+  Be part of the team, join us to help developers make better software faster
 image: images/S-2.png
 subtitle: >-
   Join us to help developers make better software faster

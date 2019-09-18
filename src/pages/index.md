@@ -1,6 +1,6 @@
 ---
 title: Altostra
-description: Combined with all your favorite tools
+description: Build modern applications in minutes, combined with all your favorite tools
 image: images/S-1.png
 sections:
   - section_id: hero
